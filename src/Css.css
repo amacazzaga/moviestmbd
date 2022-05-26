@@ -4,12 +4,14 @@ header {
   margin-top: 15px;
   height: 65px;
   display: flex;
-  color: white;
+ 
   align-items: center;
   justify-content: space-around;
   background-color: #22254b;
 }
 .btn-outline-secondary{
+    color: #a8dadc;
+    font-weight: bold;
     margin:5px;
     padding: 5px;
     width: 70px;
