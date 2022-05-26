@@ -5,8 +5,12 @@ import Css from "./Css.css";
 function App() {
   return (
     <div>
+      <div className="container">
       <Header />
+      </div>
+      <div className="container">
       <Body/>
+      </div>
     </div>
   );
 }

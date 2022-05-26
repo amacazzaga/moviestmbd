@@ -1,8 +1,25 @@
-header{
-    color: white;
-    background-color: #22254b;
+/*header*/
+header {
+    border-radius: 10px;
+  margin-top: 15px;
+  height: 55px;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  background-color: #22254b;
 }
-body{
-    color: white;
- background-color: #373b76   ;
+.btn-outline-secondary{
+    margin:5px;
+    padding: 5px;
+    width: 70px;
+    height: 40px;
+}
+.btn-outline-secondary:hover{
+    transform: scale(1.1);
+
+}
+/*body*/
+body {
+  color: white;
+  background-color: #373b76;
 }
