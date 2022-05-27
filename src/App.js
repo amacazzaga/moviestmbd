@@ -17,7 +17,8 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
+        setState(response.data)
       })
       .catch((e) => {});
   };
