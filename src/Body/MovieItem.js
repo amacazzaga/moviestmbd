@@ -2,7 +2,7 @@ import React from 'react'
 
 const MovieItem = () => {
   return (
-    <h1>Most Popular Movies:</h1>
+    <h1>Popular Movies</h1>
   )
 }
 

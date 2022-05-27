@@ -33,17 +33,19 @@ body {
 .container-movies-series {
   width: 100%;
   display: flex;
-  
 }
 .container-fluid-movies {
-  width: 50%;
+  width: 65%;
   margin: 5px;
   color: #8ecae6;
-  border: solid;
 }
 .container-fluid-series {
-  width:50%;
+  width: 45%;
   margin: 5px;
   color: #8ecae6;
-  border: solid;
+}
+h1{
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
 }
