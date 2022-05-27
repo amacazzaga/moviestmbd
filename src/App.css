@@ -1,4 +1,7 @@
 /*header*/
+.container-header{
+  margin: 35px;
+}
 header {
   border-radius: 10px;
   margin-top: 15px;
@@ -22,6 +25,22 @@ header {
 }
 /*body*/
 body {
-  color: white;
   background-color: #373b76;
+}
+.container-body {
+  margin: 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  
+}
+.container-movies-series {
+  flex-direction: column;
+  
+}
+.container-movies{
+  color: white;
+}
+.container-series{
+  color: white;
 }

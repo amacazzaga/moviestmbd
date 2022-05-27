@@ -5,10 +5,10 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <div className="container">
+      <div className="container-header">
       <Header />
       </div>
-      <div className="container">
+      <div className="container-body">
       <Body/>
       </div>
     </div>
