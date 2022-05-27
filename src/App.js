@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
-import Body from "./Body/Body";
+import MovieItem from "./MovieItem";
+import SeriesItem from "./SeriesItem";
 import axios from "axios";
 import "./App.css";
 
@@ -20,14 +21,25 @@ function App() {
         console.log(response.data);
         setState(response.data)
       })
-      .catch((e) => {});
+      .catch((e) => {
+        "no movies from the TMBD"
+      });
   };
   return (
     <div>
       <div className="container-header">
         <Header />
       </div>
-      <Body />
+      <div className="container-body">
+      <div className="container-movies-series">
+        <div className="container-fluid-movies">
+          <MovieItem />
+        </div>
+        <div className="container-fluid-series">
+          <SeriesItem />
+        </div>
+      </div>
+    </div>
     </div>
   );
 }

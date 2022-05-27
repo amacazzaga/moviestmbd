@@ -2,7 +2,7 @@ import React from 'react'
 
 const SeriesItem = () => {
   return (
-    <h1>Series</h1>
+    <h2>Series</h2>
   )
 }
 
