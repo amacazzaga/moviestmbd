@@ -1,5 +1,5 @@
 /*header*/
-.container-header{
+.container-header {
   margin: 35px;
 }
 header {
@@ -29,18 +29,23 @@ body {
 }
 .container-body {
   margin: 35px;
-  color: white;
   display: flex;
   justify-content: center;
+ 
   
 }
 .container-movies-series {
-  flex-direction: column;
-  
+
+ display: flex;
+ 
 }
-.container-movies{
+.container-movies {
+  width: 100px;
+  height: 100px;
   color: white;
 }
-.container-series{
+.container-series {
+  width: 100px;
+  height: 100px;
   color: white;
 }
