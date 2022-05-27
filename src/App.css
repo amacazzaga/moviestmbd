@@ -30,22 +30,20 @@ body {
 .container-body {
   margin: 35px;
   display: flex;
-  justify-content: center;
- 
-  
+  justify-content: space-around;
 }
 .container-movies-series {
+  display: flex;
 
- display: flex;
- 
+  flex-wrap: wrap;
 }
-.container-movies {
-  width: 100px;
-  height: 100px;
-  color: white;
+.container-fluid-movies {
+  margin: 5px;
+  color: #8ecae6;
+  border: solid;
 }
-.container-series {
-  width: 100px;
-  height: 100px;
-  color: white;
+.container-fluid-series {
+  margin: 5px;
+  color: #8ecae6;
+  border: solid;
 }
