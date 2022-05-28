@@ -36,8 +36,10 @@ function App() {
           {popularmovie.map((m)=>(
            
           <MovieItem 
+          key ={m.id}
           title ={m.title}
-          overview={m.overview}/>
+          overview={m.overview}
+          />
           
           ))}
           
