@@ -10,7 +10,7 @@ function App() {
   const popularMovies = "discover/movie?sort_by=popularity.desc";
   const apiKey = "&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const url = baseUrl + popularMovies + apiKey;
-  const [popularmovie, setpopularMovie] = useState();
+  const [popularmovie, setPopularMovie] = useState();
   useEffect(() => {
     getMoviesBy(url);
   }, []);
@@ -19,7 +19,7 @@ function App() {
       .get(url)
       .then((response) => {
         console.log(response.data.results);
-        setpopularMovie(response.data.results)
+        setPopularMovie(response.data.results)
       })
       .catch((e) => {
         console.log(e)
@@ -33,16 +33,16 @@ function App() {
       <div className="container-body">
       <div className="container-movies-series">
         <div className="container-fluid-movies">
-          {popularmovie.map((m)=>(
+        { popularmovie ?(
+        popularmovie.map((m)=>(
            
-          <MovieItem 
-          key ={m.id}
-          title ={m.title}
-          overview={m.overview}
-          />
-          
-          ))}
-          
+           <MovieItem 
+           key ={m.id}
+           title ={m.title}
+           overview={m.overview}
+           />
+           
+           ))):"cargando"}
         </div>
         <div className="container-fluid-series">
           <SeriesItem />
