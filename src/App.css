@@ -36,12 +36,12 @@ body {
   /*wrap on query here*/
 }
 .container-fluid-movies {
-  width: 65%;
+  width: 70%;
   margin: 5px;
   color: #8ecae6;
 }
 .container-fluid-series {
-  width: 45%;
+  width: 30%;
   margin: 5px;
   color: #8ecae6;
 }

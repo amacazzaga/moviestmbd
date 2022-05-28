@@ -10,7 +10,7 @@ function App() {
   const popularMovies = "discover/movie?sort_by=popularity.desc";
   const apiKey = "&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const url = baseUrl + popularMovies + apiKey;
-  const [state, setState] = useState();
+  const [popularmovie, setpopularMovie] = useState();
   useEffect(() => {
     getMoviesBy(url);
   }, []);
@@ -18,11 +18,11 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-        console.log(response.data);
-        setState(response.data)
+        console.log(response.data.results);
+        setpopularMovie(response.data.results)
       })
       .catch((e) => {
-        "no movies from the TMBD"
+        console.log(e)
       });
   };
   return (
@@ -33,7 +33,14 @@ function App() {
       <div className="container-body">
       <div className="container-movies-series">
         <div className="container-fluid-movies">
-          <MovieItem />
+          {popularmovie.map((m)=>(
+           
+          <MovieItem 
+          title ={m.title}
+          overview={m.overview}/>
+          
+          ))}
+          
         </div>
         <div className="container-fluid-series">
           <SeriesItem />

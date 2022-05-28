@@ -1,8 +1,11 @@
 import React from 'react'
 
-const MovieItem = () => {
+const MovieItem = ({title,overview}) => {
   return (
-    <h2>Popular Movies</h2>
+    <div>
+    <h2>{title}</h2>
+   <p>{overview}</p>
+    </div>
   )
 }
 
