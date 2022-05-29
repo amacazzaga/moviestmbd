@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/";
   const popularMovies = "discover/movie?sort_by=popularity.desc";
-  const imgUrl = "https://image.tmdb.org/t/p/w500"
+  const imgUrl = "https://image.tmdb.org/t/p/w342"
   const apiKey = "&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const url = baseUrl + popularMovies + apiKey;
   const [popularmovie, setPopularMovie] = useState();
