@@ -1,10 +1,10 @@
-import React from "react";
+const MovieItem = ({ title, overview, image}) => {
+ 
 
-const MovieItem = ({ title, overview }) => {
   return (
     <div>
       <h2>{title}</h2>
-      
+     <img className="img-fluid"  src ={image}/>
       <p>{overview}</p>
     </div>
   );

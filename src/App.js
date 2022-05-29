@@ -8,6 +8,7 @@ import "./App.css";
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/";
   const popularMovies = "discover/movie?sort_by=popularity.desc";
+  const imgUrl = "https://image.tmdb.org/t/p/w500"
   const apiKey = "&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const url = baseUrl + popularMovies + apiKey;
   const [popularmovie, setPopularMovie] = useState();
@@ -18,13 +19,14 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-        console.log(response.data.results);
+        console.log(response.data);
         setPopularMovie(response.data.results)
       })
       .catch((e) => {
         console.log(e)
       });
   };
+
   return (
     <div>
       <div className="container-header">
@@ -38,11 +40,14 @@ function App() {
            
            <MovieItem 
            key ={m.id}
+           id ={m.id}
            title ={m.title}
+           image ={imgUrl+m.poster_path}
            overview={m.overview}
+           
            />
            
-           ))):"cargando"}
+           ))):"Loading..."}
         </div>
         <div className="container-fluid-series">
           <SeriesItem />
