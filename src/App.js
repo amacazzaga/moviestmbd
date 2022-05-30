@@ -1,29 +1,48 @@
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
 import MovieItem from "./MovieItem";
-import SeriesItem from "./SeriesItem";
+import TelevisionItem from "./TelevisionItem";
 import axios from "axios";
 import "./App.css";
 
 function App() {
-  const baseUrl = "https://api.themoviedb.org/3/";
-  const popularMovies = "discover/movie?sort_by=popularity.desc";
-  const imgUrl = "https://image.tmdb.org/t/p/w342"
-  const apiKey = "&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
-  const url = baseUrl + popularMovies + apiKey;
+  const baseUrl = "https://api.themoviedb.org/3/discover";
+  const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
+  const popularMovies = "/movie?sort_by=popularity.desc";
+  const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
+  const popularOnTv =
+    "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
+
+  const urlTv = baseUrlTv + apiKey + popularOnTv;
+  const imgUrl = "https://image.tmdb.org/t/p/w342";
+  const imgUrlTv = "https://image.tmdb.org/t/p/w185";
+  const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
+  const [populartelevision, setPopularTelevision] = useState();
   useEffect(() => {
     getMoviesBy(url);
+    getTelevisionBy(urlTv);
   }, []);
   const getMoviesBy = async (url) => {
     axios
       .get(url)
       .then((response) => {
         console.log(response.data);
-        setPopularMovie(response.data.results)
+        setPopularMovie(response.data.results);
       })
       .catch((e) => {
-        console.log(e)
+        console.log(e.error);
+      });
+  };
+  const getTelevisionBy = async (urlTv) => {
+    axios
+      .get(urlTv)
+      .then((response) => {
+        console.log(response.data.results);
+        setPopularTelevision(response.data.results);
+      })
+      .catch((e) => {
+        console.log(e.error);
       });
   };
 
@@ -33,27 +52,33 @@ function App() {
         <Header />
       </div>
       <div className="container-body">
-      <div className="container-movies-series">
-        <div className="container-fluid-movies">
-        { popularmovie ?(
-        popularmovie.map((m)=>(
-           
-           <MovieItem 
-           key ={m.id}
-           id ={m.id}
-           title ={m.title}
-           image ={imgUrl+m.poster_path}
-           overview={m.overview}
-           
-           />
-           
-           ))):"Loading..."}
-        </div>
-        <div className="container-fluid-series">
-          <SeriesItem />
+        <div className="container-movies-series">
+          <div className="container-fluid-movies">
+            {popularmovie
+              ? popularmovie.map((m) => (
+                  <MovieItem
+                    key={m.id}
+                    id={m.id}
+                    title={m.title}
+                    image={imgUrl + m.poster_path}
+                    overview={m.overview}
+                  />
+                ))
+              : "Loading..."}
+          </div>
+          <div className="container-fluid-series">
+            {populartelevision
+              ? populartelevision.map((t) => (
+                  <TelevisionItem
+                    name={t.name}
+                    image={imgUrlTv + t.poster_path}
+                    overview ={t.overview}
+                  />
+                ))
+              : "Loanding..."}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
