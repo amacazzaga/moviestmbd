@@ -1,9 +1,9 @@
 const TelevisionItem = ({ name, overview, image }) => {
   return (
     <div>
-      <h2>{name}</h2>
+      <h5>{name}</h5>
       <img src={image} />
-      <p>{overview}</p>
+
     </div>
   );
 };

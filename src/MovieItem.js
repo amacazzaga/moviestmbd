@@ -1,9 +1,8 @@
 const MovieItem = ({ title, overview, image }) => {
   return (
-    <div>
-      <h4>{title}</h4>
+    <div className="container-movie-item">
+      <h5>{title}</h5>
       <img className="img-fluid" src={image} />
-      <p>{overview}</p>
     </div>
   );
 };

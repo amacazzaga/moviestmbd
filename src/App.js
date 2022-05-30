@@ -52,7 +52,7 @@ function App() {
         <Header />
       </div>
       <div className="container-body">
-        <div className="container-movies-television">
+        <div className="container-movies-television row-row-cols-3">
           <div className="container-fluid-movies row row-cols-2">
             {popularmovie
               ? popularmovie.map((m) => (
