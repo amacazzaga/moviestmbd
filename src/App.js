@@ -52,8 +52,8 @@ function App() {
         <Header />
       </div>
       <div className="container-body">
-        <div className="container-movies-series">
-          <div className="container-fluid-movies">
+        <div className="container-movies-television">
+          <div className="container-fluid-movies row row-cols-2">
             {popularmovie
               ? popularmovie.map((m) => (
                   <MovieItem
@@ -66,7 +66,7 @@ function App() {
                 ))
               : "Loading..."}
           </div>
-          <div className="container-fluid-series">
+          <div className="container-fluid-television">
             {populartelevision
               ? populartelevision.map((t) => (
                   <TelevisionItem

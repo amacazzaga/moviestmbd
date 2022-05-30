@@ -1,7 +1,7 @@
 const MovieItem = ({ title, overview, image }) => {
   return (
     <div>
-      <h2>{title}</h2>
+      <h4>{title}</h4>
       <img className="img-fluid" src={image} />
       <p>{overview}</p>
     </div>
