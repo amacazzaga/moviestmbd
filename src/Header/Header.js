@@ -6,7 +6,7 @@ const Header = () => {
    <header>
        <ButtonHeader text ={"Genre"}/>
        <ButtonHeader text ={"Movies"}/>
-       <ButtonHeader text ={"Series"}/>
+       <ButtonHeader text ={"On TV"}/>
        <ButtonHeader text ={"Search"}/>
    </header>
   )

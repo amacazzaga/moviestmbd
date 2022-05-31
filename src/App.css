@@ -30,21 +30,20 @@ body {
 .container-body {
   margin: 35px;
 }
+.container-movie-item{
+  /*ver*/
+}
 .container-movies-television {
   width: 100%;
   display: flex;
   /*wrap on query here*/
 }
 .container-fluid-movies {
- 
   margin: 5px;
   color: #8ecae6;
 }
-.container-movie-item {
 
-}
 .container-fluid-television {
- 
   margin: 5px;
   color: #8ecae6;
 }
@@ -55,3 +54,11 @@ h5 {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
 }
+@media only screen and (max-width: 600px) {
+  .container-movies-television {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /*wrap on query here*/
+  }
+  }

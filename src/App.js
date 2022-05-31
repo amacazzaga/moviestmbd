@@ -52,10 +52,11 @@ function App() {
         <Header />
       </div>
       <div className="container-body">
-        <div className="container-movies-television row-row-cols-3">
-          <div className="container-fluid-movies row row-cols-2">
+        <div className="container-movies-television row-row-cols-4">
+          <div className="container-fluid-movies row row-cols-auto">
             {popularmovie
               ? popularmovie.map((m) => (
+                <div className="col">
                   <MovieItem
                     key={m.id}
                     id={m.id}
@@ -63,7 +64,7 @@ function App() {
                     image={imgUrl + m.poster_path}
                     overview={m.overview}
                   />
-                ))
+                </div>))
               : "Loading..."}
           </div>
           <div className="container-fluid-television">
@@ -72,7 +73,7 @@ function App() {
                   <TelevisionItem
                     name={t.name}
                     image={imgUrlTv + t.poster_path}
-                    overview ={t.overview}
+                    overview={t.overview}
                   />
                 ))
               : "Loanding..."}
