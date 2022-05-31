@@ -1,6 +1,6 @@
 const MovieItem = ({ title, overview, image }) => {
   return (
-    <div className="container-movie-item">
+    <div>
       <img className="img-fluid" src={image} />
     </div>
   );

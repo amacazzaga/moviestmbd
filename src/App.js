@@ -47,27 +47,32 @@ function App() {
   };
 
   return (
-    <div>
+    <body>
       <div className="container-header">
         <Header />
       </div>
-      <div className="container-body">
-        <div className="container-movies-television row-row-cols-4">
-          <div className="container-fluid-movies row row-cols-auto">
+
+      <div className="container">
+        <div className="row row-cols-2">
+          <div className="container">
+          <div className="row row-cols-3">
             {popularmovie
               ? popularmovie.map((m) => (
-                <div className="col">
-                  <MovieItem
-                    key={m.id}
-                    id={m.id}
-                    title={m.title}
-                    image={imgUrl + m.poster_path}
-                    overview={m.overview}
-                  />
-                </div>))
+                  <div className="col">
+                    <MovieItem
+                      key={m.id}
+                      id={m.id}
+                      title={m.title}
+                      image={imgUrl + m.poster_path}
+                      overview={m.overview}
+                    />
+                  </div>
+                ))
               : "Loading..."}
           </div>
-          <div className="container-fluid-television">
+          </div>
+
+          <div className="col-3">
             {populartelevision
               ? populartelevision.map((t) => (
                   <TelevisionItem
@@ -80,7 +85,9 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+
+      <footer>footer</footer>
+    </body>
   );
 }
 <script
