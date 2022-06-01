@@ -14,8 +14,8 @@ function App() {
     "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
 
   const urlTv = baseUrlTv + apiKey + popularOnTv;
-  const imgUrl = "https://image.tmdb.org/t/p/w500";
-  const imgUrlTv = "https://image.tmdb.org/t/p/w185";
+  const imgUrl = "https://image.tmdb.org/t/p/w342";
+  const imgUrlTv = "https://image.tmdb.org/t/p/w342";
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
@@ -47,18 +47,18 @@ function App() {
   };
 
   return (
-    <div className="container-xxl m ">
-      <div className="container-xl m ">
+    <div>
+      <div className="container-xxl  ">
         <Header />
       </div>
       <body>
-        <div className="container-xl m ">
+        <div className="container-xl mt-2 ">
           <div className="row  row-cols-2 ">
             <div className="col-10">
-              <div className="row row-cols-auto">
+              <div className="row row-cols-12">
                 {popularmovie
                   ? popularmovie.map((m) => (
-                      <div className="col-3">
+                      <div className="col-3 mt-5 ">
                         <MovieItem
                           key={m.id}
                           id={m.id}
@@ -72,14 +72,16 @@ function App() {
               </div>
             </div>
 
-            <div className="col-2">
+            <div className="col-2 mt-2">
               {populartelevision
                 ? populartelevision.map((t) => (
-                    <TelevisionItem
-                      name={t.name}
-                      image={imgUrlTv + t.poster_path}
-                      overview={t.overview}
-                    />
+                    <div className="mt-5">
+                      <TelevisionItem
+                        name={t.name}
+                        image={imgUrlTv + t.poster_path}
+                        overview={t.overview}
+                      />
+                    </div>
                   ))
                 : "Loanding..."}
             </div>
