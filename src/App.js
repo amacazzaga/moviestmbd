@@ -47,47 +47,48 @@ function App() {
   };
 
   return (
-    <body>
-      <div className="container-header">
+    <div className="container-xxl m ">
+      <div className="container-xl m ">
         <Header />
       </div>
+      <body>
+        <div className="container-xl m ">
+          <div className="row  row-cols-2 ">
+            <div className="col-10">
+              <div className="row row-cols-auto">
+                {popularmovie
+                  ? popularmovie.map((m) => (
+                      <div className="col-3">
+                        <MovieItem
+                          key={m.id}
+                          id={m.id}
+                          title={m.title}
+                          image={imgUrl + m.poster_path}
+                          overview={m.overview}
+                        />
+                      </div>
+                    ))
+                  : "Loading..."}
+              </div>
+            </div>
 
-      <div className="container">
-        <div className="row row-cols-2">
-          <div className="col-10">
-          <div className="row row-cols-3">
-            {popularmovie
-              ? popularmovie.map((m) => (
-                  <div className="col-4">
-                    <MovieItem
-                      key={m.id}
-                      id={m.id}
-                      title={m.title}
-                      image={imgUrl + m.poster_path}
-                      overview={m.overview}
+            <div className="col-2">
+              {populartelevision
+                ? populartelevision.map((t) => (
+                    <TelevisionItem
+                      name={t.name}
+                      image={imgUrlTv + t.poster_path}
+                      overview={t.overview}
                     />
-                  </div>
-                ))
-              : "Loading..."}
-          </div>
-          </div>
-
-          <div className="col-2">
-            {populartelevision
-              ? populartelevision.map((t) => (
-                  <TelevisionItem
-                    name={t.name}
-                    image={imgUrlTv + t.poster_path}
-                    overview={t.overview}
-                  />
-                ))
-              : "Loanding..."}
+                  ))
+                : "Loanding..."}
+            </div>
           </div>
         </div>
-      </div>
 
-      <footer>footer</footer>
-    </body>
+        <footer>footer</footer>
+      </body>
+    </div>
   );
 }
 <script

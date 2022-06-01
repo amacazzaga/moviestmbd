@@ -1,7 +1,5 @@
 /*header*/
-.container-header {
-  margin: 35px;
-}
+
 header {
   border-radius: 10px;
   margin-top: 15px;
@@ -11,6 +9,9 @@ header {
   justify-content: space-around;
   background-color: #22254b;
   /*dont forget shadow!*/
+}
+.m{
+  margin:15px;
 }
 .btn-outline-secondary {
   color: #8ecae6;
@@ -30,23 +31,7 @@ body {
 .container-body {
   margin: 35px;
 }
-.container-movies{
 
-}
-.container-movies-television {
-  width: 100%;
-  display: flex;
-  /*wrap on query here*/
-}
-.container-fluid-movies {
-  margin: 5px;
-  color: #8ecae6;
-}
-
-.container-fluid-television {
-  margin: 5px;
-  color: #8ecae6;
-}
 h5 {
   font-size: large;
   font-weight: bold;
@@ -55,10 +40,8 @@ h5 {
   color: white;
 }
 @media only screen and (max-width: 600px) {
-  .container-movies-television {
-    width: 100%;
-    display: flex;
+  .movies-television {
     flex-wrap: wrap;
     /*wrap on query here*/
   }
-  }
+}
