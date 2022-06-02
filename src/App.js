@@ -54,7 +54,7 @@ function App() {
       <body>
         <div className="container-xl mt-2 ">
           <div className="row  row-cols-2 ">
-            <div className="col-10" >
+            <div className="col-xl-10 col-md-12" >
               <div className="row row-cols-auto">
                 {popularmovie
                   ? popularmovie.map((m) => (
@@ -72,7 +72,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-2 mt-2">
+            <div className="col-xl-2  d-none d-xl-block mt-2">
               {populartelevision
                 ? populartelevision.map((t) => (
                     <div className="mt-5">
