@@ -58,7 +58,7 @@ function App() {
               <div className="row row-cols-auto">
                 {popularmovie
                   ? popularmovie.map((m) => (
-                      <div className="col-xl-3 col-md-4 mt-5 ">
+                      <div className="col-xl-3 col-md-4 col-sm-6 mt-5 ">
                         <MovieItem
                           key={m.id}
                           id={m.id}
