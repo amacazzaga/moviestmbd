@@ -53,9 +53,9 @@ function App() {
       </div>
       <body>
         <div className="container-xl mt-2 ">
-          <div className="row  row-cols-2 ">
-            <div className="col-xl-10 col-md-12" >
-              <div className="row row-cols-auto">
+          <div className="row ">
+            <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+              <div className="row">
                 {popularmovie
                   ? popularmovie.map((m) => (
                       <div className="col-xl-3 col-md-4 col-sm-6 mt-5 ">
