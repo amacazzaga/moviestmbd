@@ -14,7 +14,7 @@ function App() {
     "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
 
   const urlTv = baseUrlTv + apiKey + popularOnTv;
-  const imgUrl = "https://image.tmdb.org/t/p/w500";
+  const imgUrl = "https://image.tmdb.org/t/p/w780";
   const imgUrlTv = "https://image.tmdb.org/t/p/w342";
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
