@@ -14,7 +14,7 @@ function App() {
     "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
 
   const urlTv = baseUrlTv + apiKey + popularOnTv;
-  const imgUrl = "https://image.tmdb.org/t/p/w342";
+  const imgUrl = "https://image.tmdb.org/t/p/w500";
   const imgUrlTv = "https://image.tmdb.org/t/p/w342";
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
@@ -53,12 +53,12 @@ function App() {
       </div>
       <body>
         <div className="container-xl mt-2 ">
-          <div className="row ">
-            <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+          <div className="row">
+            <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 " >
               <div className="row">
                 {popularmovie
                   ? popularmovie.map((m) => (
-                      <div className="col-xl-3 col-md-4 col-sm-6 mt-5 ">
+                      <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
                         <MovieItem
                           key={m.id}
                           id={m.id}

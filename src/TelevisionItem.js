@@ -1,6 +1,6 @@
 const TelevisionItem = ({ name, overview, image }) => {
   return (
-    <div>
+    <div >
       <img className="img-fluid" src={image} />
     </div>
   );
