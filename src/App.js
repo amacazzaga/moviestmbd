@@ -15,7 +15,7 @@ function App() {
 
   const urlTv = baseUrlTv + apiKey + popularOnTv;
   const imgUrl = "https://image.tmdb.org/t/p/w780";
-  const imgUrlTv = "https://image.tmdb.org/t/p/w342";
+  const imgUrlTv = "https://image.tmdb.org/t/p/w780";
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
@@ -54,7 +54,7 @@ function App() {
       <body>
         <div className="container-xl mt-2 ">
           <div className="row">
-            <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 " >
+            <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
               <div className="row">
                 {popularmovie
                   ? popularmovie.map((m) => (
@@ -73,6 +73,9 @@ function App() {
             </div>
 
             <div className="col-xl-2  d-none d-xl-block mt-2">
+              <aside className="bd-sidebar mt-5">
+                <nav className="bd-link" id="bd-docs-nav" aria-label="Docs navigation">
+                  <ul className="list-unstyled mb-0 py-3 pt-md-1">
               {populartelevision
                 ? populartelevision.map((t) => (
                     <div className="mt-5">
@@ -83,7 +86,10 @@ function App() {
                       />
                     </div>
                   ))
-                : "Loanding..."}
+                  : "Loanding..."}
+                  </ul>
+                </nav>
+                </aside>
             </div>
           </div>
         </div>

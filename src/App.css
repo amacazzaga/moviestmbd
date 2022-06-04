@@ -11,7 +11,6 @@ header {
   /*dont forget shadow!*/
 }
 
-
 .btn-outline-secondary {
   color: #8ecae6;
   font-weight: bold;
@@ -31,17 +30,11 @@ body {
   margin: 35px;
 }
 
+.bd-link{
+  position: sticky;
+  top: 5rem;
+  display: block !important;
+  height: calc(300vh - 7rem);
+  overflow-y: auto;
+}
 
-h5 {
-  font-size: large;
-  font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-}
-@media only screen and (max-width: 600px) {
-  .movies-television {
-    flex-wrap: wrap;
-    /*wrap on query here*/
-  }
-}
