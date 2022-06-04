@@ -30,11 +30,10 @@ body {
   margin: 35px;
 }
 
-.bd-link{
+.navbar{
   position: sticky;
   top: 5rem;
-  display: block !important;
-  height: calc(300vh - 7rem);
+  height: calc(50vh - 5px);
   overflow-y: auto;
 }
 

@@ -72,24 +72,24 @@ function App() {
               </div>
             </div>
 
-            <div className="col-xl-2  d-none d-xl-block mt-2">
-              <aside className="bd-sidebar mt-5">
-                <nav className="bd-link" id="bd-docs-nav" aria-label="Docs navigation">
-                  <ul className="list-unstyled mb-0 py-3 pt-md-1">
-              {populartelevision
-                ? populartelevision.map((t) => (
-                    <div className="mt-5">
-                      <TelevisionItem
-                        name={t.name}
-                        image={imgUrlTv + t.poster_path}
-                        overview={t.overview}
-                      />
-                    </div>
-                  ))
-                  : "Loanding..."}
+            <div className="col-xl-2  d-none d-xl-block ">
+              <aside className=" mt-5">
+                <nav className="navbar">
+                  <ul>
+                    {populartelevision
+                      ? populartelevision.map((t) => (
+                          <div className="mt-5">
+                            <TelevisionItem
+                              name={t.name}
+                              image={imgUrlTv + t.poster_path}
+                              overview={t.overview}
+                            />
+                          </div>
+                        ))
+                      : "Loanding..."}
                   </ul>
                 </nav>
-                </aside>
+              </aside>
             </div>
           </div>
         </div>
