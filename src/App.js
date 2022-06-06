@@ -19,7 +19,7 @@ function App() {
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
-  const [accordion, setAccordionButton] = useState("collapse");
+  const [accordionButtonTelevision, setAccordionButtonTelevision] = useState("collapse");
   useEffect(() => {
     getMoviesBy(url);
     getTelevisionBy(urlTv);
@@ -79,9 +79,11 @@ function App() {
                   <h2 class="accordion-header">
                     <button
                       onClick={() => {
-                        if(accordion=== "collapse")
-                        setAccordionButton("collapse show");
-                        else{setAccordionButton("collapse")}
+                        if (accordionButtonTelevision === "collapse")
+                          setAccordionButtonTelevision("collapse show");
+                        else {
+                          setAccordionButtonTelevision("collapse");
+                        }
                       }}
                       class="accordion-button "
                       type="button"
@@ -95,12 +97,12 @@ function App() {
                   </h2>
                   <div
                     id="collapseOne"
-                    class={`accordion-collapse ${accordion}`}
+                    class={`accordion-collapse ${accordionButtonTelevision}`}
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body p-0">
-                      <aside className="  ">
+                      <aside >
                         <nav className="navbar">
                           <ul className="p-1">
                             {populartelevision

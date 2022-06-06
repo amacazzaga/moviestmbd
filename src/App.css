@@ -30,6 +30,7 @@ body {
   margin: 35px;
 }
 .accordion-button:not(.collapsed) {
+  font-weight: bold;
   background-color: #22254b;
   color: #8ecae6;
 }
@@ -50,5 +51,9 @@ aside {
   overflow-y: auto;
 }
 .navbar::-webkit-scrollbar {
-  
+background: #22254b;
+width: 4px;
 }
+.navbar::-webkit-scrollbar-thumb {
+  background: #8ecae6;
+  }
