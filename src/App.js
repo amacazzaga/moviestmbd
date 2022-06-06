@@ -105,6 +105,7 @@ function App() {
                       <aside >
                         <nav className="navbar">
                           <ul className="p-1">
+                            <li>
                             {populartelevision
                               ? populartelevision.map((t) => (
                                   <div className="mt-5">
@@ -116,6 +117,7 @@ function App() {
                                   </div>
                                 ))
                               : "Loanding..."}
+                              </li>
                           </ul>
                         </nav>
                       </aside>

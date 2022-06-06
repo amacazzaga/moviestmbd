@@ -10,8 +10,8 @@ header {
   background-color: #22254b;
   /*dont forget shadow!*/
 }
-
-.btn-outline-secondary {
+.btn-secondary {
+  background: #22254b;
   color: #8ecae6;
   font-weight: bold;
   margin: 5px;
