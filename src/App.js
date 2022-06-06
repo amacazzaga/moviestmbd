@@ -84,7 +84,7 @@ function App() {
                       aria-expanded="true"
                       aria-controls="collapseOne"
                     >
-                      Accordion Item #1
+                      On Television
                     </button>
                   </h2>
                   <div

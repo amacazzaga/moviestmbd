@@ -29,11 +29,12 @@ body {
 .container-body {
   margin: 35px;
 }
-
-.navbar{
+.accordion{
   position: sticky;
-  top: 0%;
-  height: calc(50vh - 5px);
+  top:0%;
+}
+.navbar{
+  height: calc(113vh - 15px);
   overflow-y: auto;
 }
 
