@@ -29,12 +29,26 @@ body {
 .container-body {
   margin: 35px;
 }
-.accordion{
-  position: sticky;
-  top:0%;
+.accordion-button:not(.collapsed) {
+  background-color: #22254b;
+  color: #8ecae6;
 }
-.navbar{
+aside {
+  background-color: #373b76;
+}
+.accordion {
+  position: sticky;
+  top: 0%;
+}
+.accordion-item {
+  border: solid;
+  border-radius: 5px;
+  border-color: #22254b;
+}
+.navbar {
   height: calc(113vh - 15px);
   overflow-y: auto;
 }
-
+.navbar::-webkit-scrollbar {
+  
+}

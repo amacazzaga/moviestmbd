@@ -19,6 +19,7 @@ function App() {
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
+  const [accordion, setAccordionButton] = useState("collapse");
   useEffect(() => {
     getMoviesBy(url);
     getTelevisionBy(urlTv);
@@ -73,11 +74,16 @@ function App() {
             </div>
 
             <div className="col-xl-2  d-none d-xl-block ">
-              <div class="accordion mt-5" id="accordionExample">
+              <div class="accordion mt-5">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
+                  <h2 class="accordion-header">
                     <button
-                      class="accordion-button"
+                      onClick={() => {
+                        if(accordion=== "collapse")
+                        setAccordionButton("collapse show");
+                        else{setAccordionButton("collapse")}
+                      }}
+                      class="accordion-button "
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
@@ -89,12 +95,12 @@ function App() {
                   </h2>
                   <div
                     id="collapseOne"
-                    class="accordion-collapse collapse show"
+                    class={`accordion-collapse ${accordion}`}
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body p-0">
-                      <aside className=" mt-5 ">
+                      <aside className="  ">
                         <nav className="navbar">
                           <ul className="p-1">
                             {populartelevision
