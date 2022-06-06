@@ -52,7 +52,7 @@ function App() {
         <Header />
       </div>
       <body>
-        <div className="container-xl mt-2 ">
+        <div className="container-xxl mt-2 ">
           <div className="row">
             <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
               <div className="row">
@@ -73,23 +73,48 @@ function App() {
             </div>
 
             <div className="col-xl-2  d-none d-xl-block ">
-              <aside className=" mt-5">
-                <nav className="navbar">
-                  <ul>
-                    {populartelevision
-                      ? populartelevision.map((t) => (
-                          <div className="mt-5">
-                            <TelevisionItem
-                              name={t.name}
-                              image={imgUrlTv + t.poster_path}
-                              overview={t.overview}
-                            />
-                          </div>
-                        ))
-                      : "Loanding..."}
-                  </ul>
-                </nav>
-              </aside>
+              <div class="accordion mt-5" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body p-0">
+                      <aside className=" mt-5 ">
+                        <nav className="navbar">
+                          <ul className="p-1">
+                            {populartelevision
+                              ? populartelevision.map((t) => (
+                                  <div className="mt-5">
+                                    <TelevisionItem
+                                      name={t.name}
+                                      image={imgUrlTv + t.poster_path}
+                                      overview={t.overview}
+                                    />
+                                  </div>
+                                ))
+                              : "Loanding..."}
+                          </ul>
+                        </nav>
+                      </aside>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
