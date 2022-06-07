@@ -2,7 +2,6 @@
 
 header {
   border-radius: 10px;
-  
   height: 65px;
   display: flex;
   align-items: center;
@@ -10,6 +9,7 @@ header {
   background-color: #22254b;
   /*dont forget shadow!*/
 }
+
 .btn-outline-secondary {
   background: #22254b;
   color: #8ecae6;

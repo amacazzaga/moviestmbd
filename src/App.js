@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div>
-      <div className="container-xxl  ">
+      <div className="container-xxl mt-2 ">
         <Header />
       </div>
       <body>
