@@ -14,9 +14,8 @@ const ButtonHeader = ({ text }) => {
             setDropdown("dropdown-menu");
           }
         }}
-        class="btn btn-secondary dropdown-toggle"
+        class="btn-outline-secondary dropdown-toggle"
         type="button"
-        id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
