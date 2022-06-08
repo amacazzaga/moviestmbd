@@ -2,20 +2,27 @@ import React from "react";
 import ButtonHeader from "./ButtonHeader";
 import InputSearch from "./InputSearch";
 import HamburgerMenu from "./HamburgerMenu";
-
+import { useState } from "react";
 const Header = () => {
+  const [collapse,setCollapse]=useState("collapse")
   return (
     <header className="container-xxl mt-15 ">
       <nav class=" navbar-expand-sm ">
         <div class="container-fluid">
-          <HamburgerMenu className="navbar-toggler" aria-expanded="true" />
+          <HamburgerMenu onClick={()=>{
+            if(collapse ==="collapse"){
+              setCollapse("collapse show")
+            }else{
+              setCollapse("collapse")
+            }
+          }} className="navbar-toggler" aria-expanded="true" />
 
-          <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+          <div class={`collapse navbar-${collapse}`}>
+            {/*here class show*/}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+                  class="nav-link "
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"

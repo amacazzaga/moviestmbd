@@ -1,11 +1,6 @@
 /*header*/
 
 header {
-  border-radius: 10px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   background-color: #22254b;
   /*dont forget shadow!*/
 }
