@@ -7,7 +7,7 @@ const Header = () => {
   const [collapse, setCollapse] = useState("collapse");
   return (
     <header className="container-xxl mt-15 ">
-      <nav class=" navbar-expand-sm  ">
+      <nav class=" navbar-expand-md  ">
         <div class="container-fluid d-flex">
           <HamburgerMenu
             onClick={() => {
@@ -22,7 +22,7 @@ const Header = () => {
           />
 
           <div class={`collapse navbar-${collapse}  justify-content-around`}>
-            <ul>
+            <ul className="m-2 p-1 justify-content-around">
               <li class=" list-group list-group-horizontal ">
                 <ButtonHeader text={"Genre"} />
                 <ButtonHeader text={"Movies"} />

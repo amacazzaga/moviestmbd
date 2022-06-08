@@ -5,7 +5,7 @@ const ButtonHeader = ({ text }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
 
   return (
-    <div class="container-xxl list-group-item  dropdown">
+    <div class="list-group-item  dropdown">
       <button
         onClick={() => {
           if (dropdown === "dropdown-menu") {
