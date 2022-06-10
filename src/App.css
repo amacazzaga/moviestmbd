@@ -13,9 +13,10 @@ header {
 .btn-outline-secondary:hover {
   transform: scale(1.3);
 }
-.list-group-item{
+.list-group-item {
   background-color: #22254b;
 }
+
 /*body*/
 body {
   background-color: #373b76;
@@ -50,4 +51,11 @@ aside {
 }
 .navbar::-webkit-scrollbar-thumb {
   background: #8ecae6;
+}
+
+@media only screen and (max-width: 768px) {
+  .list-group {
+    display: flex;
+    flex-direction: column;
+  }
 }

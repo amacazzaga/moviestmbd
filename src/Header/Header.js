@@ -5,7 +5,7 @@ import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 const Header = () => {
   const [collapse, setCollapse] = useState("collapse");
-  const [horizontalList,setHorizontalList]=useState("list-group-horizontal")
+
   return (
     <header className="container-xxl mt-15 ">
       <nav class=" navbar-expand-md  ">
@@ -13,11 +13,11 @@ const Header = () => {
           <HamburgerMenu
             onClick={() => {
               if (collapse === "collapse") {
-                setCollapse("collapse show")
-                setHorizontalList();
+                setCollapse("collapse show");
+           
               } else {
                 setCollapse("collapse");
-              } 
+              }
             }}
             className="navbar-toggler"
             aria-expanded="true"
@@ -25,7 +25,7 @@ const Header = () => {
 
           <div class={`collapse navbar-${collapse}  justify-content-around`}>
             <ul className="m-2 p-1 justify-content-around">
-              <li class= {`list-group ${horizontalList}`}  >
+              <li class="list-group list-group-horizontal d-flex">
                 <ButtonHeader text={"Genre"} />
                 <ButtonHeader text={"Movies"} />
                 <ButtonHeader text={"On TV"} />
