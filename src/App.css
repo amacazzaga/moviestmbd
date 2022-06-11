@@ -13,8 +13,13 @@ header {
 .btn-outline-secondary:hover {
   transform: scale(1.3);
 }
+.list-group{
+  border: solid #22254b;
+}
 .list-group-item {
   background-color: #22254b;
+  border: solid #22254b;
+ 
 }
 
 /*body*/
