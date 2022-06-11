@@ -2,7 +2,7 @@ import React from "react";
 
 const InputSearch = () => {
   return (
-    <form class="d-flex">
+    <form class=" container-md input-search d-flex">
       <input
         class="outline-secondary m-2"
         type="search"

@@ -33,9 +33,11 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
               </li>
             </ul>
+            <div className="container-md">
             <form class="d-flex">
               <InputSearch />
             </form>
+            </div>
           </div>
         </div>
       </nav>
