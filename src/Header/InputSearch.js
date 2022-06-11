@@ -8,6 +8,7 @@ const InputSearch = () => {
         type="search"
         placeholder="Your Movie..."
       ></input>
+
       <button class="btn-outline-secondary m-2" type="submit">
         Search
       </button>
