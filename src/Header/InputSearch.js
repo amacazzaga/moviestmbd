@@ -2,9 +2,9 @@ import React from "react";
 
 const InputSearch = () => {
   return (
-    <form class=" container-md input-search d-flex">
+    <form class=" container-md input-search d-flex flex-row-reverse">
       <input
-        class="outline-secondary m-2"
+        class="outline-secondary m-2 "
         type="search"
         placeholder="Your Movie..."
       ></input>

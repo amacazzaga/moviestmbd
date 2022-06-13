@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="container-xxl mt-15 ">
       <nav class=" navbar-expand-md  ">
-        <div class="container ">
+        <div class="container  ">
           <HamburgerMenu
             onClick={() => {
               if (collapse === "collapse") {
@@ -23,8 +23,8 @@ const Header = () => {
             aria-expanded="true"
           />
 
-          <div class={`collapse navbar-${collapse}  justify-content-around`}>
-            <ul className="m-2 p-1 justify-content-around">
+          <div class={`collapse navbar-${collapse}   `/*ver justify content en desk*/}>
+            <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
                 <ButtonHeader text={"Genre"} />
                 <ButtonHeader text={"Movies"} />
@@ -34,7 +34,7 @@ const Header = () => {
               </li>
             </ul>
             <div className="container-md">
-            <form class="d-flex">
+            <form class="d-flex ">
               <InputSearch />
             </form>
             </div>
