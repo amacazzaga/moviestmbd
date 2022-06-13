@@ -14,7 +14,6 @@ const Header = () => {
             onClick={() => {
               if (collapse === "collapse") {
                 setCollapse("collapse show");
-           
               } else {
                 setCollapse("collapse");
               }
@@ -23,7 +22,11 @@ const Header = () => {
             aria-expanded="true"
           />
 
-          <div class={`collapse navbar-${collapse}   `/*ver justify content en desk*/}>
+          <div
+            class={
+              `collapse navbar-${collapse}   ` /*ver justify content en desk*/
+            }
+          >
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
                 <ButtonHeader text={"Genre"} />
@@ -34,9 +37,9 @@ const Header = () => {
               </li>
             </ul>
             <div className="container-md">
-            <form class="d-flex ">
-              <InputSearch />
-            </form>
+              <form class="d-flex ">
+                <InputSearch />
+              </form>
             </div>
           </div>
         </div>
