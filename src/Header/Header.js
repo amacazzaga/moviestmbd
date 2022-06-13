@@ -7,7 +7,7 @@ const Header = () => {
   const [collapse, setCollapse] = useState("collapse");
 
   return (
-    <header className="container-xxl mt-15 ">
+    <header className="container-xxl mt-15 shadow-lg  rounded ">
       <nav class=" navbar-expand-md  ">
         <div class="container-xl  ">
           <HamburgerMenu
@@ -22,11 +22,7 @@ const Header = () => {
             aria-expanded="true"
           />
 
-          <div
-            class={
-              `collapse navbar-${collapse}   ` /*ver justify content en desk*/
-            }
-          >
+          <div class={`collapse navbar-${collapse}`}>
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
                 <ButtonHeader text={"Genre"} />

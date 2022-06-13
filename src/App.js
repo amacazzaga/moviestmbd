@@ -19,7 +19,8 @@ function App() {
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
-  const [accordionButtonTelevision, setAccordionButtonTelevision] = useState("collapse");
+  const [accordionButtonTelevision, setAccordionButtonTelevision] =
+    useState("collapse");
   useEffect(() => {
     getMoviesBy(url);
     getTelevisionBy(urlTv);
@@ -57,21 +58,23 @@ function App() {
           <div className="row">
             <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
               <div className="row">
-                {popularmovie
-                  ? popularmovie.map((m) => (
-                      <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
-                        <MovieItem
-                          key={m.id}
-                          id={m.id}
-                          title={m.title}
-                          image={imgUrl + m.poster_path}
-                          overview={m.overview}
-                        />
-                      </div>
-                    ))
-                  : <div class="spinner-border text-primary" role="status">
-                  <span class="visually-hidden">Loading...</span>
-                </div>}
+                {popularmovie ? (
+                  popularmovie.map((m) => (
+                    <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
+                      <MovieItem
+                        key={m.id}
+                        id={m.id}
+                        title={m.title}
+                        image={imgUrl + m.poster_path}
+                        overview={m.overview}
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -101,25 +104,24 @@ function App() {
                     id="collapseOne"
                     class={`accordion-collapse ${accordionButtonTelevision}`}
                     aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body p-0">
-                      <aside >
+                      <aside>
                         <nav className="navbar">
                           <ul className="p-1">
                             <li>
-                            {populartelevision
-                              ? populartelevision.map((t) => (
-                                  <div className="mt-5">
-                                    <TelevisionItem
-                                      name={t.name}
-                                      image={imgUrlTv + t.poster_path}
-                                      overview={t.overview}
-                                    />
-                                  </div>
-                                ))
-                              : "Loanding..."}
-                              </li>
+                              {populartelevision
+                                ? populartelevision.map((t) => (
+                                    <div className="mt-5">
+                                      <TelevisionItem
+                                        name={t.name}
+                                        image={imgUrlTv + t.poster_path}
+                                        overview={t.overview}
+                                      />
+                                    </div>
+                                  ))
+                                : "Loanding..."}
+                            </li>
                           </ul>
                         </nav>
                       </aside>
