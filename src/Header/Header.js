@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="container-xxl mt-15 ">
       <nav class=" navbar-expand-md  ">
-        <div class="container  ">
+        <div class="container-xl  ">
           <HamburgerMenu
             onClick={() => {
               if (collapse === "collapse") {
