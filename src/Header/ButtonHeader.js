@@ -13,6 +13,7 @@ const ButtonHeader = ({ text }) => {
           } else {
             setDropdown("dropdown-menu");
           }
+          
         }}
         class=" btn-outline-secondary dropdown-toggle "
         type="button"
