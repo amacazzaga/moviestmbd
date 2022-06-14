@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const ButtonHeader = ({ text }) => {
+const ButtonHeader = ({ text, getMoviesByGenre }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
 
   return (
@@ -13,7 +13,6 @@ const ButtonHeader = ({ text }) => {
           } else {
             setDropdown("dropdown-menu");
           }
-          
         }}
         class=" btn-outline-secondary dropdown-toggle "
         type="button"
@@ -25,7 +24,17 @@ const ButtonHeader = ({ text }) => {
 
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
-          <a class="dropdown-item" href="#">
+          <a
+            onClick={() => {
+              const baseUrl = "https://api.themoviedb.org/3/discover/movie?/";
+              const genre =
+                "with_genres=18&sort_by=vote_average.desc&vote_count.gte=10&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
+              const url = baseUrl + genre;
+              getMoviesByGenre(url);
+            }}
+            class="dropdown-item"
+            href="#"
+          >
             Action
           </a>
         </li>
@@ -43,5 +52,6 @@ const ButtonHeader = ({ text }) => {
     </div>
   );
 };
+
 
 export default ButtonHeader;

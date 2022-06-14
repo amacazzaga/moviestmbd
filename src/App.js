@@ -19,6 +19,7 @@ function App() {
   const url = baseUrl + popularMovies + "&" + apiKey;
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
+  const [genremovie, setGenreMovie] = useState();
   const [accordionButtonTelevision, setAccordionButtonTelevision] =
     useState("collapse");
   useEffect(() => {
@@ -47,11 +48,23 @@ function App() {
         console.log(e.error);
       });
   };
+  const getMoviesByGenre = async (url) => {
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response.data);
+        setGenreMovie(response.data.results)
+       
+      })
+      .catch((e) => {
+        console.log(e.error);
+      });
+  };
 
   return (
     <div>
       <div className="container-xxl mt-2 ">
-        <Header />
+        <Header getMoviesByGenre={getMoviesByGenre} />
       </div>
       <body>
         <div className="container-xxl mt-2 ">
