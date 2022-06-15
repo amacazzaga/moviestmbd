@@ -53,5 +53,4 @@ const ButtonHeader = ({ text, getMoviesByGenre }) => {
   );
 };
 
-
 export default ButtonHeader;

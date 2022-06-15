@@ -3,7 +3,7 @@ import ButtonHeader from "./ButtonHeader";
 import InputSearch from "./InputSearch";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
-const Header = ({getMoviesByGenre}) => {
+const Header = ({ getMoviesByGenre }) => {
   const [collapse, setCollapse] = useState("collapse");
 
   return (
@@ -25,7 +25,11 @@ const Header = ({getMoviesByGenre}) => {
           <div class={`collapse navbar-${collapse}`}>
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
-                <ButtonHeader getMoviesByGenre={getMoviesByGenre} text={"Genre"} />
+                <ButtonHeader
+                  getMoviesByGenre={getMoviesByGenre}
+                  text={"Genre"}
+                />
+                {/*make button /home */}
                 <ButtonHeader text={"Movies"} />
                 <ButtonHeader text={"On TV"} />
 

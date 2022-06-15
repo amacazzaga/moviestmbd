@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
 import MovieItem from "./MovieItem";
@@ -53,8 +54,7 @@ function App() {
       .get(url)
       .then((response) => {
         console.log(response.data);
-        setGenreMovie(response.data.results)
-       
+        setGenreMovie(response.data.results);
       })
       .catch((e) => {
         console.log(e.error);
@@ -74,17 +74,23 @@ function App() {
                 {popularmovie ? (
                   popularmovie.map((m) => (
                     <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
-                      <MovieItem
-                        key={m.id}
-                        id={m.id}
-                        title={m.title}
-                        image={imgUrl + m.poster_path}
-                        overview={m.overview}
-                      />
+                      <Router>
+                        <Switch>
+                          <Route exact path="/home">
+                          <MovieItem
+                            key={m.id}
+                            id={m.id}
+                            title={m.title}
+                            image={imgUrl + m.poster_path}
+                            overview={m.overview}
+                          />
+                          </Route>
+                        </Switch>
+                      </Router>
                     </div>
                   ))
                 ) : (
-                  <div class="spinner-border text-primary" role="status">
+                  <div className="spinner-border text-primary" role="status">
                     <span class="visually-hidden">Loading...</span>
                   </div>
                 )}
@@ -127,6 +133,7 @@ function App() {
                                 ? populartelevision.map((t) => (
                                     <div className="mt-5">
                                       <TelevisionItem
+                                        key={t.id}
                                         name={t.name}
                                         image={imgUrlTv + t.poster_path}
                                         overview={t.overview}
