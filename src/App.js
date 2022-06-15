@@ -31,7 +31,7 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
         setPopularMovie(response.data.results);
       })
       .catch((e) => {
@@ -42,7 +42,7 @@ function App() {
     axios
       .get(urlTv)
       .then((response) => {
-        console.log(response.data.results);
+        //console.log(response.data.results);
         setPopularTelevision(response.data.results);
       })
       .catch((e) => {
@@ -71,29 +71,49 @@ function App() {
           <div className="row">
             <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
               <div className="row">
-                {popularmovie ? (
-                  popularmovie.map((m) => (
-                    <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
-                      <Router>
-                        <Switch>
-                          <Route exact path="/home">
-                          <MovieItem
-                            key={m.id}
-                            id={m.id}
-                            title={m.title}
-                            image={imgUrl + m.poster_path}
-                            overview={m.overview}
-                          />
-                          </Route>
-                        </Switch>
-                      </Router>
-                    </div>
-                  ))
-                ) : (
-                  <div className="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                  </div>
-                )}
+                <Router>
+                  <Switch>
+                    <Route exact path="/">
+                      {popularmovie ? (
+                        popularmovie.map((m) => (
+                          <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
+                            <MovieItem
+                              key={m.id}
+                              id={m.id}
+                              title={m.title}
+                              image={imgUrl + m.poster_path}
+                              overview={m.overview}
+                            />
+                          </div>
+                        ))
+                      ) : (
+                        <div
+                          className="spinner-border text-primary"
+                          role="status"
+                        >
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      )}{" "}
+                    </Route>
+                    <Route exact path="/action">
+                      {genremovie ? (
+                        genremovie.map((m) => (
+                          <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
+                            <MovieItem
+                              key={m.id}
+                              id={m.id}
+                              title={m.title}
+                              image={imgUrl + m.poster_path}
+                              overview={m.overview}
+                            />
+                          </div>
+                        ))
+                      ) : (
+                        <div></div>
+                      )}{" "}
+                    </Route>
+                  </Switch>
+                </Router>
               </div>
             </div>
 
