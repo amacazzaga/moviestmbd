@@ -2,11 +2,10 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
 import MovieItem from "./Body/MovieItem";
-import TelevisionItem from "./TelevisionItem";
+import TelevisionItem from "./Body/TelevisionItem";
 import axios from "axios";
-
-import "./App.css";
 import MovieItemMap from "./Body/MovieItemMap";
+import "./App.css";
 
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/discover";
@@ -56,7 +55,7 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setGenreMovie(response.data.results);
       })
       .catch((e) => {
