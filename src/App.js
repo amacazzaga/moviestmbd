@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
-import MovieItem from "./MovieItem";
+import MovieItem from "./Body/MovieItem"
 import TelevisionItem from "./TelevisionItem";
 import axios from "axios";
+
 import "./App.css";
+import MovieItemMap from "./Body/MovieItemMap";
 
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/discover";
@@ -49,6 +51,7 @@ function App() {
         console.log(e.error);
       });
   };
+
   const getMoviesByGenre = async (url) => {
     axios
       .get(url)
@@ -60,7 +63,6 @@ function App() {
         console.log(e.error);
       });
   };
-
   return (
     <div>
       <div className="container-xxl mt-2 ">
@@ -96,21 +98,7 @@ function App() {
                       )}{" "}
                     </Route>
                     <Route exact path="/action">
-                      {genremovie ? (
-                        genremovie.map((m) => (
-                          <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
-                            <MovieItem
-                              key={m.id}
-                              id={m.id}
-                              title={m.title}
-                              image={imgUrl + m.poster_path}
-                              overview={m.overview}
-                            />
-                          </div>
-                        ))
-                      ) : (
-                        <div></div>
-                      )}{" "}
+                  <MovieItemMap genremovie={genremovie}/>
                     </Route>
                   </Switch>
                 </Router>
