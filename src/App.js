@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
-import MovieItem from "./Body/MovieItem"
+import MovieItem from "./Body/MovieItem";
 import TelevisionItem from "./TelevisionItem";
 import axios from "axios";
 
@@ -64,16 +64,16 @@ function App() {
       });
   };
   return (
-    <div>
-      <div className="container-xxl mt-2 ">
-        <Header getMoviesByGenre={getMoviesByGenre} />
-      </div>
-      <body>
+    <Router>
+      <div>
         <div className="container-xxl mt-2 ">
-          <div className="row">
-            <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
-              <div className="row">
-                <Router>
+          <Header getMoviesByGenre={getMoviesByGenre} />
+        </div>
+        <body>
+          <div className="container-xxl mt-2 ">
+            <div className="row">
+              <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
+                <div className="row">
                   <Switch>
                     <Route exact path="/">
                       {popularmovie ? (
@@ -95,75 +95,75 @@ function App() {
                         >
                           <span class="visually-hidden">Loading...</span>
                         </div>
-                      )}{" "}
+                      )}
                     </Route>
-                    <Route exact path="/action">
-                  <MovieItemMap genremovie={genremovie}/>
+                    <Route path="/action">
+                      <MovieItemMap genremovie={genremovie} />
                     </Route>
                   </Switch>
-                </Router>
+                </div>
               </div>
-            </div>
 
-            <div className="col-xl-2  d-none d-xl-block ">
-              <div class="accordion mt-5">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      onClick={() => {
-                        if (accordionButtonTelevision === "collapse")
-                          setAccordionButtonTelevision("collapse show");
-                        else {
-                          setAccordionButtonTelevision("collapse");
-                        }
-                      }}
-                      class="accordion-button "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
+              <div className="col-xl-2  d-none d-xl-block ">
+                <div class="accordion mt-5">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        onClick={() => {
+                          if (accordionButtonTelevision === "collapse")
+                            setAccordionButtonTelevision("collapse show");
+                          else {
+                            setAccordionButtonTelevision("collapse");
+                          }
+                        }}
+                        class="accordion-button "
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        On Television
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class={`accordion-collapse ${accordionButtonTelevision}`}
+                      aria-labelledby="headingOne"
                     >
-                      On Television
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class={`accordion-collapse ${accordionButtonTelevision}`}
-                    aria-labelledby="headingOne"
-                  >
-                    <div class="accordion-body p-0">
-                      <aside>
-                        <nav className="navbar">
-                          <ul className="p-1">
-                            <li>
-                              {populartelevision
-                                ? populartelevision.map((t) => (
-                                    <div className="mt-5">
-                                      <TelevisionItem
-                                        key={t.id}
-                                        name={t.name}
-                                        image={imgUrlTv + t.poster_path}
-                                        overview={t.overview}
-                                      />
-                                    </div>
-                                  ))
-                                : "Loanding..."}
-                            </li>
-                          </ul>
-                        </nav>
-                      </aside>
+                      <div class="accordion-body p-0">
+                        <aside>
+                          <nav className="navbar">
+                            <ul className="p-1">
+                              <li>
+                                {populartelevision
+                                  ? populartelevision.map((t) => (
+                                      <div className="mt-5">
+                                        <TelevisionItem
+                                          key={t.id}
+                                          name={t.name}
+                                          image={imgUrlTv + t.poster_path}
+                                          overview={t.overview}
+                                        />
+                                      </div>
+                                    ))
+                                  : "Loanding..."}
+                              </li>
+                            </ul>
+                          </nav>
+                        </aside>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <footer>footer</footer>
-      </body>
-    </div>
+          <footer>footer</footer>
+        </body>
+      </div>
+    </Router>
   );
 }
 <script

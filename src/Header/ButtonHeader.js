@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const ButtonHeader = ({ text, getMoviesByGenre }) => {
@@ -24,7 +25,10 @@ const ButtonHeader = ({ text, getMoviesByGenre }) => {
 
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
+          <Link to ="/action">
           <a
+            class="dropdown-item"
+            
             onClick={() => {
               const baseUrl = "https://api.themoviedb.org/3/discover/movie?/";
               const genre =
@@ -32,11 +36,10 @@ const ButtonHeader = ({ text, getMoviesByGenre }) => {
               const url = baseUrl + genre;
               getMoviesByGenre(url);
             }}
-            class="dropdown-item"
-            href="#"
           >
             Action
           </a>
+          </Link>
         </li>
         <li>
           <a class="dropdown-item" href="#">
