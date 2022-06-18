@@ -11,6 +11,8 @@ function App() {
   const baseUrl = "https://api.themoviedb.org/3/discover";
   const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
   const popularMovies = "/movie?sort_by=popularity.desc";
+  const genreActionEndPoint =
+    "with_genres=28&sort_by=vote_average.desc&vote_count.gte=300";
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const popularOnTv =
     "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
@@ -19,6 +21,7 @@ function App() {
   const imgUrl = "https://image.tmdb.org/t/p/original";
   const imgUrlTv = "https://image.tmdb.org/t/p/original";
   const url = baseUrl + popularMovies + "&" + apiKey;
+  const urlGenreAction = baseUrl+"/movie?"+genreActionEndPoint+"&"+apiKey
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
   const [genremovie, setGenreMovie] = useState();
@@ -27,6 +30,7 @@ function App() {
   useEffect(() => {
     getMoviesBy(url);
     getTelevisionBy(urlTv);
+    getMoviesByGenre(urlGenreAction)
   }, []);
   const getMoviesBy = async (url) => {
     axios

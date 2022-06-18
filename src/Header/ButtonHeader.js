@@ -28,13 +28,7 @@ const ButtonHeader = ({ text, getMoviesByGenre }) => {
           <Link to="/action">
             <a
               class="dropdown-item"
-              onClick={() => {
-                const baseUrl = "https://api.themoviedb.org/3/discover/movie?";
-                const genre =
-                  "with_genres=28&sort_by=vote_average.desc&vote_count.gte=300&api_key=0f0c22bee45b529c07d02b1f2dc14e01";
-                const url = baseUrl + genre;
-                getMoviesByGenre(url);
-              }}
+              
             >
               Action
             </a>
