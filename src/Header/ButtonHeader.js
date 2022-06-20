@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ButtonHeader = ({ text, getMoviesByGenre }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
@@ -26,18 +26,13 @@ const ButtonHeader = ({ text, getMoviesByGenre }) => {
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
           <Link to="/action">
-            <a
-              class="dropdown-item"
-              
-            >
-              Action
-            </a>
+            <a class="dropdown-item">Action</a>
           </Link>
         </li>
         <li>
-          <a class="dropdown-item" href="#">
-            Another action
-          </a>
+        <Link to="/adventure">
+            <a class="dropdown-item">Adventure</a>
+          </Link>
         </li>
         <li>
           <a class="dropdown-item" href="#">

@@ -1,8 +1,19 @@
 import React from "react";
 import MovieItem from "./MovieItem";
+import { useEffect } from "react";
 
-const MovieItemMap = ({ genremovie }) => {
+const MovieItemAdvenure = ({ genremovie, getMoviesByGenre }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w780";
+  const baseUrl = "https://api.themoviedb.org/3/discover";
+  const genreAdventureEndPoint =
+    "with_genres=12&sort_by=vote_average.desc&vote_count.gte=300";
+  const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
+  const urlGenreAdventure =
+    baseUrl + "/movie?" + genreAdventureEndPoint + "&" + apiKey;
+
+  useEffect(() => {
+    getMoviesByGenre(urlGenreAdventure);
+  }, []);
   return genremovie ? (
     genremovie.map((m) => (
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
@@ -22,4 +33,4 @@ const MovieItemMap = ({ genremovie }) => {
   );
 };
 
-export default MovieItemMap;
+export default MovieItemAdvenure;
