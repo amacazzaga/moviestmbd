@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const ButtonHeader = ({ text, getMoviesByGenre }) => {
+const ButtonHeaderGengre = ({ text, getMoviesByGenre }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
 
   return (
@@ -44,4 +44,4 @@ const ButtonHeader = ({ text, getMoviesByGenre }) => {
   );
 };
 
-export default ButtonHeader;
+export default ButtonHeaderGengre;
