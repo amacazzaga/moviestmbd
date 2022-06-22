@@ -67,7 +67,7 @@ function App() {
     <Router>
       <div>
         <div className="container-xxl mt-2 ">
-          <Header getMoviesByGenre={getMoviesByGenre/*remove*/} />
+          <Header getMoviesByGenre={getMoviesByGenre /*remove*/} />
         </div>
         <body>
           <div className="container-xxl mt-2 ">
@@ -99,12 +99,6 @@ function App() {
                     </Route>
                     <Route path="/genre/:genre">
                       <MovieItemAction
-                        getMoviesByGenre={getMoviesByGenre}
-                        genremovie={genremovie}
-                      />
-                    </Route>
-                    <Route path="/adventure">
-                      <MovieItemAdvenure
                         getMoviesByGenre={getMoviesByGenre}
                         genremovie={genremovie}
                       />
