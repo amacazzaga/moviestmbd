@@ -97,7 +97,7 @@ function App() {
                         </div>
                       )}
                     </Route>
-                    <Route path="/action">
+                    <Route path="/genre/:genre">
                       <MovieItemAction
                         getMoviesByGenre={getMoviesByGenre}
                         genremovie={genremovie}
