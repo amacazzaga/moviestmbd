@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const MovieItemAction = ({ genremovie, getMoviesByGenre }) => {
-  const { genre } = useParams();
+  const {id} = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
   const baseUrl = "https://api.themoviedb.org/3/discover";
-  const genreActionEndPoint = `with_genres=${genre}&sort_by=vote_average.desc&vote_count.gte=300`;
+  const genreActionEndPoint = `with_genres=${id}&sort_by=vote_average.desc&vote_count.gte=300`;
 
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const urlGenreAction =
