@@ -4,9 +4,9 @@ import Header from "./Header/Header";
 import MovieItem from "./Body/MovieItem";
 import TelevisionItem from "./Body/TelevisionItem";
 import axios from "axios";
+import MovieItemGenre from "./Body/MovieItemGenre";
 import "./App.css";
-import MovieItemAction from "./Body/MovieItemAction";
-import MovieItemAdvenure from "./Body/MovieItemAdenture";
+
 
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/discover";
@@ -98,7 +98,7 @@ function App() {
                       )}
                     </Route>
                     <Route path="/genre/:genre/:id">
-                      <MovieItemAction
+                      <MovieItemGenre
                         getMoviesByGenre={getMoviesByGenre}
                         genremovie={genremovie}
                       />
