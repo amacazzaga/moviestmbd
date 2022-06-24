@@ -6,12 +6,12 @@ import axios from "axios";
 
 const MovieItemMovie = () => {
   const [movie, setMovie] = useState();
-  const { id } = useParams();
+  const { movies} = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
-  const baseUrl = "https://api.themoviedb.org/3/discover";
-  const movieEndPoint = `with_genres=${id}&sort_by=vote_average.desc&vote_count.gte=300`;
+  const baseUrl = "https://api.themoviedb.org/3/movie/";
+  const movieEndPoint = `${movies}`;
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
-  const urlMovie = baseUrl + "/movie?" + movieEndPoint + "&" + apiKey;
+  const urlMovie = baseUrl  + movieEndPoint + "?" + apiKey;
 ////////////////////////////////////////
 const getMoviesByMovie = async (url) => {
   axios

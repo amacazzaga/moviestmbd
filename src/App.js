@@ -89,7 +89,7 @@ function App() {
                     <Route path="/genre/:genre/:id">
                       <MovieItemGenre />
                     </Route>
-                    <Route path="/movie/:movie/:id">
+                    <Route path="/movie/:movies/">
                       <MovieItemMovie />
                     </Route>
                   </Switch>
