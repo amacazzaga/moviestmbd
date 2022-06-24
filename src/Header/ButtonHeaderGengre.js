@@ -77,7 +77,7 @@ const genres = [
   },
 ];
 
-const ButtonHeaderGengre = ({ text, getMoviesByGenre }) => {
+const ButtonHeaderGengre = ({ text }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
 
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonHeaderGenre from "./ButtonHeaderGengre";
+import ButtonHeaderMovie from "./ButtonHeaderMovie";
 import InputSearch from "./InputSearch";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
@@ -31,7 +32,7 @@ const Header = ({ getMoviesByGenre }) => {
                   text={"Genre"}
                 />
                 {/*make button, create component for button header movie and on tv /home */}
-                <ButtonHeaderGenre text={"Movies"} />
+                <ButtonHeaderMovie text={"Movies"} />
                 <ButtonHeaderGenre text={"On TV"} />
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
