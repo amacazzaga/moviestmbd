@@ -7,7 +7,6 @@ import axios from "axios";
 import MovieItemGenre from "./Body/MovieItemGenre";
 import "./App.css";
 
-
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/discover";
   const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
@@ -22,7 +21,7 @@ function App() {
 
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
-  const [genremovie, setGenreMovie] = useState();
+
   const [accordionButtonTelevision, setAccordionButtonTelevision] =
     useState("collapse");
   useEffect(() => {
@@ -52,22 +51,11 @@ function App() {
       });
   };
 
-  const getMoviesByGenre = async (url) => {
-    axios
-      .get(url)
-      .then((response) => {
-        // console.log(response.data);
-        setGenreMovie(response.data.results);
-      })
-      .catch((e) => {
-        console.log(e.error);
-      });
-  };
   return (
     <Router>
       <div>
         <div className="container-xxl mt-2 ">
-          <Header getMoviesByGenre={getMoviesByGenre /*remove*/} />
+          <Header />
         </div>
         <body>
           <div className="container-xxl mt-2 ">
@@ -98,10 +86,7 @@ function App() {
                       )}
                     </Route>
                     <Route path="/genre/:genre/:id">
-                      <MovieItemGenre
-                        getMoviesByGenre={getMoviesByGenre}
-                        genremovie={genremovie}
-                      />
+                      <MovieItemGenre />
                     </Route>
                   </Switch>
                 </div>

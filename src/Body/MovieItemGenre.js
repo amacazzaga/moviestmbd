@@ -1,21 +1,34 @@
 import React from "react";
 import MovieItem from "./MovieItem";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
-const MovieItemGenre = ({ genremovie, getMoviesByGenre }) => {
-  const {id} = useParams();
+const MovieItemGenre = () => {
+  const [genremovie, setGenreMovie] = useState();
+  const { id } = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
   const baseUrl = "https://api.themoviedb.org/3/discover";
-  const genreActionEndPoint = `with_genres=${id}&sort_by=vote_average.desc&vote_count.gte=300`;
-
+  const genreEndPoint = `with_genres=${id}&sort_by=vote_average.desc&vote_count.gte=300`;
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
-  const urlGenreAction =
-    baseUrl + "/movie?" + genreActionEndPoint + "&" + apiKey;
-
+  const urlGenre = baseUrl + "/movie?" + genreEndPoint + "&" + apiKey;
+////////////////////////////////////////
+const getMoviesByGenre = async (url) => {
+  axios
+    .get(url)
+    .then((response) => {
+      // console.log(response.data);
+      setGenreMovie(response.data.results);
+    })
+    .catch((e) => {
+      console.log(e.error);
+    });
+};
+/////////////////////////////////////////
   useEffect(() => {
-    getMoviesByGenre(urlGenreAction);
-  }, [genreActionEndPoint]);
+    getMoviesByGenre(urlGenre);
+  }, [genreEndPoint]);
+  ////////////////////////////////////
   return genremovie ? (
     genremovie.map((m) => (
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
