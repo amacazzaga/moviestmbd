@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 const movies = [
   {
-    name: "top_rated",
+    name: "upcoming",
   },
+  {
+    name:"top_rated"
+  }
 ];
 
 const ButtonHeaderMovie = ({ text }) => {
@@ -30,20 +33,11 @@ const ButtonHeaderMovie = ({ text }) => {
 
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
-          <Link to={`/movie/${movies[0].name}`} >
-            <a class="dropdown-item">Top Rated</a>
-          </Link>
-          <Link >
-            <a class="dropdown-item">Now Playing</a>
-          </Link>
-          <Link >
-            <a class="dropdown-item">Popular</a>
-          </Link>
-          <Link >
-            <a class="dropdown-item">Top Rated</a>
-          </Link>
-          <Link >
+          <Link to={`/movie/${movies[0].name}`}>
             <a class="dropdown-item">Upcoming</a>
+          </Link>
+          <Link to={`/movie/${movies[1].name}`}>
+            <a class="dropdown-item">Top Rated</a>
           </Link>
         </li>
       </ul>
