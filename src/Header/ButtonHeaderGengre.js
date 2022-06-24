@@ -83,7 +83,7 @@ const ButtonHeaderGengre = ({ text, getMoviesByGenre }) => {
   return (
     <div class="list-group-item   dropdown">
       <button
-        onClick={() => {
+        onClick={(e) => {
           if (dropdown === "dropdown-menu") {
             setDropdown("dropdown-menu show");
           } else {
