@@ -18,7 +18,7 @@ const MovieItemMovie = () => {
     axios
       .get(url)
       .then((response) => {
-         //console.log(response.data);
+         console.log(response.data);
         setMovie(response.data.results);
       })
       .catch((e) => {
