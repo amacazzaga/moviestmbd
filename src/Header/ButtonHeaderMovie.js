@@ -12,9 +12,8 @@ const movies = [
     name: "now_playing",
   },
   {
-    name: "now_playing",
-    lenguage: "&language=en-US&page=1&region=Ar",
-    region: "&region=Ar",
+    name: "popular",
+
   },
 ];
 
@@ -49,6 +48,9 @@ const ButtonHeaderMovie = ({ text }) => {
           </Link>
           <Link to={`/movie/${movies[2].name}/${movies[2].lenguage}`}>
             <a class="dropdown-item">Now Playing</a>
+          </Link>
+          <Link to={`/movie/${movies[3].name}`}>
+            <a class="dropdown-item">Popular</a>
           </Link>
         </li>
       </ul>
