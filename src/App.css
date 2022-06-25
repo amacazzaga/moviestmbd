@@ -4,6 +4,9 @@ header {
   background-color: #22254b;
   /*dont forget shadow!*/
 }
+a{
+  text-decoration: none;
+}
 
 .btn-outline-secondary {
   background: #22254b;
