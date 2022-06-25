@@ -86,7 +86,7 @@ function App() {
                         </div>
                       )}
                     </Route>
-                    <Route path="/genre/:genre/:id">
+                    <Route path="/genre/:genre/:id/">
                       <MovieItemGenre />
                     </Route>
                     <Route path="/movie/:movies/">

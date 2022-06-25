@@ -7,7 +7,11 @@ const movies = [
   },
   {
     name:"top_rated"
-  }
+  },
+{
+  name:"now_playing",
+  lenguage:"&language=en-US&page=1"
+}
 ];
 
 const ButtonHeaderMovie = ({ text }) => {
@@ -33,11 +37,14 @@ const ButtonHeaderMovie = ({ text }) => {
 
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
-          <Link to={`/movie/${movies[0].name}`}>
+          <Link to={`/movie/${movies[0].name}/${""}`}>
             <a class="dropdown-item">Upcoming</a>
           </Link>
-          <Link to={`/movie/${movies[1].name}`}>
+          <Link to={`/movie/${movies[1].name}/${""}`}>
             <a class="dropdown-item">Top Rated</a>
+          </Link>
+          <Link to={`/movie/${movies[2].name}/${movies[2].lenguage}`}>
+            <a class="dropdown-item">Now Playing</a>
           </Link>
         </li>
       </ul>
