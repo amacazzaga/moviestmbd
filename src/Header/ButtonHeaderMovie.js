@@ -13,13 +13,10 @@ const movies = [
   },
   {
     name: "popular",
-
   },
 ];
-
 const ButtonHeaderMovie = ({ text }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
-
   return (
     <div class="list-group-item   dropdown">
       <button
@@ -37,7 +34,6 @@ const ButtonHeaderMovie = ({ text }) => {
       >
         {text}
       </button>
-
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
           <Link to={`/movie/${movies[0].name}`}>
@@ -46,7 +42,7 @@ const ButtonHeaderMovie = ({ text }) => {
           <Link to={`/movie/${movies[1].name}`}>
             <a class="dropdown-item">Top Rated</a>
           </Link>
-          <Link to={`/movie/${movies[2].name}/${movies[2].lenguage}`}>
+          <Link to={`/movie/${movies[2].name}`}>
             <a class="dropdown-item">Now Playing</a>
           </Link>
           <Link to={`/movie/${movies[3].name}`}>

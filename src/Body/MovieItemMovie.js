@@ -11,17 +11,16 @@ const MovieItemMovie = () => {
   const baseUrl = "https://api.themoviedb.org/3/movie/";
   const movieEndPoint = `${movies}`;
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
-
   const urlMovie = baseUrl + movieEndPoint + "?" + apiKey;
   ////////////////////////////////////////
   const getMoviesByMovie = async (url) => {
     axios
       .get(url)
       .then((response) => {
-         console.log(response.data);
+        console.log(response.data);
         setMovie(response.data.results);
       })
-      .catch((e) => {
+      .catch((e) => {     
         console.log(e.error);
       });
   };
@@ -29,6 +28,7 @@ const MovieItemMovie = () => {
   useEffect(() => {
     getMoviesByMovie(urlMovie);
   }, [movieEndPoint]);
+
   ////////////////////////////////////
   return movie ? (
     movie.map((m) => (

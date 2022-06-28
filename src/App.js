@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import Header from "./Header/Header";
 import MovieItem from "./Body/MovieItem";
 import TelevisionItem from "./Body/TelevisionItem";
-import axios from "axios";
 import MovieItemGenre from "./Body/MovieItemGenre";
 import MovieItemMovie from "./Body/MovieItemMovie";
 import "./App.css";
@@ -51,7 +51,6 @@ function App() {
         console.log(e.error);
       });
   };
-
   return (
     <Router>
       <div>
@@ -95,7 +94,6 @@ function App() {
                   </Switch>
                 </div>
               </div>
-
               <div className="col-xl-2  d-none d-xl-block ">
                 <div class="accordion mt-5">
                   <div class="accordion-item">
