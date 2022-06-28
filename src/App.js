@@ -9,6 +9,7 @@ import MovieItemGenre from "./Body/MovieItemGenre";
 import MovieItemMovie from "./Body/MovieItemMovie";
 import InputSearch from "./Header/InputSearch";
 import "./App.css";
+import MovieItemSearch from "./Body/MovieItemSearch";
 
 function App() {
   const baseUrl = "https://api.themoviedb.org/3/discover";
@@ -107,6 +108,9 @@ function App() {
                     </Route>
                     <Route path="/television/:ontv/">
                       <TelevisionItemTelevision />
+                    </Route>
+                    <Route path="/search/">
+                      <MovieItemSearch genremovie={genremovie} />
                     </Route>
                   </Switch>
                 </div>
