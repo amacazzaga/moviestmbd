@@ -6,7 +6,7 @@ const television = [
     name: "on_the_air",
   },
   {
-    name: "latest",
+    name: "airing_today",
   },
   {
     name: "top_rated",
@@ -40,7 +40,7 @@ const ButtonHeaderTelevision = ({ text }) => {
             <a class="dropdown-item">On The Air</a>
           </Link>
           <Link to={`/television/${television[1].name}`}>
-            <a class="dropdown-item">Latest</a>
+            <a class="dropdown-item">Airing Today</a>
           </Link>
           <Link to={`/television/${television[2].name}`}>
             <a class="dropdown-item">Top Rated</a>
