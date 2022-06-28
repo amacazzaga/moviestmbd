@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./Header/Header";
 import MovieItem from "./Body/MovieItem";
 import TelevisionItem from "./Body/TelevisionItem";
+import TelevisionItemTelevision from "./Body/TelevisionItemTelevision";
 import MovieItemGenre from "./Body/MovieItemGenre";
 import MovieItemMovie from "./Body/MovieItemMovie";
 import "./App.css";
@@ -90,6 +91,9 @@ function App() {
                     </Route>
                     <Route path="/movie/:movies/">
                       <MovieItemMovie />
+                    </Route>
+                    <Route path="/television/:ontv/">
+                      <TelevisionItemTelevision />
                     </Route>
                   </Switch>
                 </div>
