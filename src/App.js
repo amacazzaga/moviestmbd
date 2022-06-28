@@ -7,6 +7,7 @@ import TelevisionItem from "./Body/TelevisionItem";
 import TelevisionItemTelevision from "./Body/TelevisionItemTelevision";
 import MovieItemGenre from "./Body/MovieItemGenre";
 import MovieItemMovie from "./Body/MovieItemMovie";
+import InputSearch from "./Header/InputSearch";
 import "./App.css";
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-        // console.log(response.data);
+         console.log(response.data);
         setGenreMovie(response.data.results);
       })
       .catch((e) => {
@@ -68,7 +69,7 @@ function App() {
     <Router>
       <div>
         <div className="container-xxl mt-2 ">
-          <Header />
+          <Header genremovie= {genremovie} getMoviesByGenre={getMoviesByGenre} />
         </div>
         <body>
           <div className="container-xxl mt-2 ">

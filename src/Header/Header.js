@@ -6,7 +6,7 @@ import InputSearch from "./InputSearch";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 
-const Header = ({ getMoviesByGenre }) => {
+const Header = ({ gengremovie, getMoviesByGenre }) => {
   const [collapse, setCollapse] = useState("collapse");
 
   return (
@@ -41,7 +41,7 @@ const Header = ({ getMoviesByGenre }) => {
             </ul>
             <div className="container-md">
               <form class="d-flex ">
-                <InputSearch />
+                <InputSearch gengremovie={gengremovie} getMoviesByGenre={getMoviesByGenre} />
               </form>
             </div>
           </div>
