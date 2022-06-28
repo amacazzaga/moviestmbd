@@ -4,8 +4,8 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const MovieItemGenre = () => {
-  const [genremovie, setGenreMovie] = useState();
+const MovieItemGenre = ({genremovie,getMoviesByGenre}) => {
+ 
   const { id } = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
   const baseUrl = "https://api.themoviedb.org/3/discover";
@@ -13,17 +13,7 @@ const MovieItemGenre = () => {
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const urlGenre = baseUrl + "/movie?" + genreEndPoint + "&" + apiKey;
 ////////////////////////////////////////
-const getMoviesByGenre = async (url) => {
-  axios
-    .get(url)
-    .then((response) => {
-      // console.log(response.data);
-      setGenreMovie(response.data.results);
-    })
-    .catch((e) => {
-      console.log(e.error);
-    });
-};
+
 /////////////////////////////////////////
   useEffect(() => {
     getMoviesByGenre(urlGenre);

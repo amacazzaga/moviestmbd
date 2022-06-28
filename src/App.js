@@ -23,6 +23,7 @@ function App() {
 
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
+  const [genremovie, setGenreMovie] = useState();
 
   const [accordionButtonTelevision, setAccordionButtonTelevision] =
     useState("collapse");
@@ -47,6 +48,17 @@ function App() {
       .then((response) => {
         //console.log(response.data.results);
         setPopularTelevision(response.data.results);
+      })
+      .catch((e) => {
+        console.log(e.error);
+      });
+  };
+  const getMoviesByGenre = async (url) => {
+    axios
+      .get(url)
+      .then((response) => {
+        // console.log(response.data);
+        setGenreMovie(response.data.results);
       })
       .catch((e) => {
         console.log(e.error);
@@ -87,7 +99,7 @@ function App() {
                       )}
                     </Route>
                     <Route path="/genre/:genre/:id/">
-                      <MovieItemGenre />
+                      <MovieItemGenre genremovie= {genremovie} getMoviesByGenre={getMoviesByGenre}  />
                     </Route>
                     <Route path="/movie/:movies/">
                       <MovieItemMovie />

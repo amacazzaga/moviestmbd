@@ -7,7 +7,7 @@ import axios from "axios";
 const TelevisionItemTelevision = () => {
   const [television, setTelevision] = useState();
   const { ontv } = useParams();
-  const imgUrl = "https://image.tmdb.org/t/p/w780";
+  const imgUrl = "https://image.tmdb.org/t/p/original";
   const baseUrl = "https://api.themoviedb.org/3/tv/";
   const televisionEndPoint = `${ontv}`;
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
