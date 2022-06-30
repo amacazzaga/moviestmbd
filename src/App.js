@@ -31,7 +31,7 @@ function App() {
     getMoviesBy(url);
     getTelevisionBy(urlTv);
   }, []);
-  const getMoviesBy = async (url) => {
+  const getMoviesBy =  (url) => {
     axios
       .get(url)
       .then((response) => {
@@ -42,7 +42,7 @@ function App() {
         console.log(e.error);
       });
   };
-  const getTelevisionBy = async (urlTv) => {
+  const getTelevisionBy =  (urlTv) => {
     axios
       .get(urlTv)
       .then((response) => {
@@ -53,11 +53,11 @@ function App() {
         console.log(e.error);
       });
   };
-  const getMoviesByGenre = async (url) => {
+  const getMoviesByGenre = (url) => {
     axios
       .get(url)
       .then((response) => {
-        console.log(response.data);
+       // console.log(response.data.results);
         setGenreMovie(response.data.results);
       })
       .catch((e) => {
