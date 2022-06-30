@@ -9,9 +9,7 @@ const InputSearch = ({ getMoviesByGenre }) => {
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const query = `query=${inputvalue}`;
   const urlInput = baseUrl + "?" + apiKey + "&" + query;
-  useEffect(() => {
-    getMoviesByGenre(urlInput);
-  }, []);
+
   return (
     <form class=" container-md input-search d-flex ">
       <input
