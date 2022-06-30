@@ -22,9 +22,9 @@ const imgUrlTv = "https://image.tmdb.org/t/p/original";
 const url = baseUrl + popularMovies + "&" + apiKey;
 
 function App() {
-  const [popularmovie, setPopularMovie] = useState();
-  const [populartelevision, setPopularTelevision] = useState();
-  const [genremovie, setGenreMovie] = useState();
+  const [popularmovie, setPopularMovie] = useState([]);
+  const [populartelevision, setPopularTelevision] = useState([]);
+  const [genremovie, setGenreMovie] = useState([]);
   const [accordionButtonTelevision, setAccordionButtonTelevision] =
     useState("collapse");
   useEffect(() => {

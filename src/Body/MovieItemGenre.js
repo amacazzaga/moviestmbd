@@ -19,7 +19,7 @@ const MovieItemGenre = ({genremovie,getMoviesByGenre}) => {
     getMoviesByGenre(urlGenre);
   }, [genreEndPoint]);
   ////////////////////////////////////
-  return genremovie ? (
+  return  (
     genremovie.map((m) => (
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
         <MovieItem
@@ -29,13 +29,10 @@ const MovieItemGenre = ({genremovie,getMoviesByGenre}) => {
           image={imgUrl + m.poster_path}
           overview={m.overview}
         />
-      </div>
+      </div> /*loading spinner*/
     ))
-  ) : (
-    <div className="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  );
+  ) 
+  ;
 };
 
 export default MovieItemGenre;
