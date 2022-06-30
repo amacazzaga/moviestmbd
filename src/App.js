@@ -10,23 +10,20 @@ import MovieItemMovie from "./Body/MovieItemMovie";
 import InputSearch from "./Header/InputSearch";
 import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
-
+const baseUrl = "https://api.themoviedb.org/3/discover";
+const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
+const popularMovies = "/movie?sort_by=popularity.desc";
+const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
+const popularOnTv =
+  "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
+const urlTv = baseUrlTv + apiKey + popularOnTv;
+const imgUrl = "https://image.tmdb.org/t/p/original";
+const imgUrlTv = "https://image.tmdb.org/t/p/original";
+const url = baseUrl + popularMovies + "&" + apiKey;
 function App() {
-  const baseUrl = "https://api.themoviedb.org/3/discover";
-  const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
-  const popularMovies = "/movie?sort_by=popularity.desc";
-  const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
-  const popularOnTv =
-    "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
-  const urlTv = baseUrlTv + apiKey + popularOnTv;
-  const imgUrl = "https://image.tmdb.org/t/p/original";
-  const imgUrlTv = "https://image.tmdb.org/t/p/original";
-  const url = baseUrl + popularMovies + "&" + apiKey;
-
   const [popularmovie, setPopularMovie] = useState();
   const [populartelevision, setPopularTelevision] = useState();
   const [genremovie, setGenreMovie] = useState();
-
   const [accordionButtonTelevision, setAccordionButtonTelevision] =
     useState("collapse");
   useEffect(() => {
@@ -59,7 +56,7 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-         console.log(response.data);
+        console.log(response.data);
         setGenreMovie(response.data.results);
       })
       .catch((e) => {
@@ -70,7 +67,7 @@ function App() {
     <Router>
       <div>
         <div className="container-xxl mt-2 ">
-          <Header genremovie= {genremovie} getMoviesByGenre={getMoviesByGenre} />
+          <Header genremovie={genremovie} getMoviesByGenre={getMoviesByGenre} />
         </div>
         <body>
           <div className="container-xxl mt-2 ">
@@ -101,7 +98,10 @@ function App() {
                       )}
                     </Route>
                     <Route path="/genre/:genre/:id/">
-                      <MovieItemGenre genremovie= {genremovie} getMoviesByGenre={getMoviesByGenre}  />
+                      <MovieItemGenre
+                        genremovie={genremovie}
+                        getMoviesByGenre={getMoviesByGenre}
+                      />
                     </Route>
                     <Route path="/movie/:movies/">
                       <MovieItemMovie />
