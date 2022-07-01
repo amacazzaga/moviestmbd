@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./Header/Header";
-import MovieItem from "./Body/MovieItem";
 import TelevisionItem from "./Body/TelevisionItem";
 import TelevisionItemTelevision from "./Body/TelevisionItemTelevision";
 import MovieItemGenre from "./Body/MovieItemGenre";

@@ -6,6 +6,7 @@ import axios from "axios";
 
 const MovieItemMovie = () => {
   const [movie, setMovie] = useState();
+  const [loading,setLoading]=useState(true)
   const { movies } = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
   const baseUrl = "https://api.themoviedb.org/3/movie/";
@@ -13,12 +14,13 @@ const MovieItemMovie = () => {
   const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
   const urlMovie = baseUrl + movieEndPoint + "?" + apiKey;
   ////////////////////////////////////////
-  const getMoviesByMovie = async (url) => {
+  const getMoviesByMovie = (url) => {
     axios
       .get(url)
       .then((response) => {
         console.log(response.data);
         setMovie(response.data.results);
+        setLoading(false)
       })
       .catch((e) => {     
         console.log(e.error);
@@ -30,7 +32,7 @@ const MovieItemMovie = () => {
   }, [movieEndPoint]);
 
   ////////////////////////////////////
-  return movie ? (
+  return loading != true ? (
     movie.map((m) => (
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
         <MovieItem
