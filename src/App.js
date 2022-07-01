@@ -68,6 +68,13 @@ function App() {
         console.log(e.error);
       });
   };
+  const classChanger = ()=>{
+    if (accordionButtonTelevision === "collapse")
+    setAccordionButtonTelevision("collapse show");
+  else {
+    setAccordionButtonTelevision("collapse");
+  }
+  }
   /*return*/
   return (
     <Router>
@@ -109,11 +116,7 @@ function App() {
                     <h2 class="accordion-header">
                       <button
                         onClick={() => {
-                          if (accordionButtonTelevision === "collapse")
-                            setAccordionButtonTelevision("collapse show");
-                          else {
-                            setAccordionButtonTelevision("collapse");
-                          }
+                         classChanger()
                         }}
                         class="accordion-button "
                         type="button"

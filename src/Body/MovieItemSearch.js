@@ -21,5 +21,4 @@ const MovieItemSearch = ({genremovie,loading}) => {
         </div>
       );
 }
-
 export default MovieItemSearch
