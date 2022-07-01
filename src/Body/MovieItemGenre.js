@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const MovieItemGenre = ({genremovie,getMoviesByGenre}) => {
+const MovieItemGenre = ({genremovie,getMoviesByGenre,loading}) => {
  
   const { id } = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
@@ -19,8 +19,8 @@ const MovieItemGenre = ({genremovie,getMoviesByGenre}) => {
     getMoviesByGenre(urlGenre);
   }, [genreEndPoint]);
   ////////////////////////////////////
-  return  (
-    genremovie.map((m) => (
+  return loading != true ? (
+   genremovie.map((m) => (
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
         <MovieItem
           key={m.id}
@@ -29,9 +29,14 @@ const MovieItemGenre = ({genremovie,getMoviesByGenre}) => {
           image={imgUrl + m.poster_path}
           overview={m.overview}
         />
-      </div> /*loading spinner*/
+      </div>
     ))
-  ) 
+  ) : (
+    <div className="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  );
+   
   ;
 };
 

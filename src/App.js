@@ -7,9 +7,10 @@ import TelevisionItem from "./Body/TelevisionItem";
 import TelevisionItemTelevision from "./Body/TelevisionItemTelevision";
 import MovieItemGenre from "./Body/MovieItemGenre";
 import MovieItemMovie from "./Body/MovieItemMovie";
-import InputSearch from "./Header/InputSearch";
+import MovieItemHome from "./Body/MovieItemHome";
 import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
+///////////////////////////////////////////////////////////////////////
 const baseUrl = "https://api.themoviedb.org/3/discover";
 const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
 const popularMovies = "/movie?sort_by=popularity.desc";
@@ -17,37 +18,40 @@ const apiKey = "api_key=0f0c22bee45b529c07d02b1f2dc14e01";
 const popularOnTv =
   "&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0";
 const urlTv = baseUrlTv + apiKey + popularOnTv;
-const imgUrl = "https://image.tmdb.org/t/p/original";
 const imgUrlTv = "https://image.tmdb.org/t/p/original";
 const url = baseUrl + popularMovies + "&" + apiKey;
-
+////////////////////////////////////////////////////////////////////
 function App() {
   const [popularmovie, setPopularMovie] = useState([]);
   const [populartelevision, setPopularTelevision] = useState([]);
   const [genremovie, setGenreMovie] = useState([]);
   const [accordionButtonTelevision, setAccordionButtonTelevision] =
     useState("collapse");
+  const [loading, setLoading] = useState(true);
+  ////////////////////////////////////////////////////////////
   useEffect(() => {
     getMoviesBy(url);
     getTelevisionBy(urlTv);
   }, []);
-  const getMoviesBy =  (url) => {
+  const getMoviesBy = (url) => {
     axios
       .get(url)
       .then((response) => {
         //console.log(response.data);
         setPopularMovie(response.data.results);
+        setLoading(false);
       })
       .catch((e) => {
         console.log(e.error);
       });
   };
-  const getTelevisionBy =  (urlTv) => {
+  const getTelevisionBy = (urlTv) => {
     axios
       .get(urlTv)
       .then((response) => {
         //console.log(response.data.results);
         setPopularTelevision(response.data.results);
+        setLoading(false);
       })
       .catch((e) => {
         console.log(e.error);
@@ -57,18 +61,21 @@ function App() {
     axios
       .get(url)
       .then((response) => {
-       // console.log(response.data.results);
+        // console.log(response.data.results);
         setGenreMovie(response.data.results);
+        setLoading(false);
       })
       .catch((e) => {
         console.log(e.error);
       });
   };
+  /*return*/
   return (
     <Router>
       <div>
         <div className="container-xxl mt-2 ">
-          <Header genremovie={genremovie} getMoviesByGenre={getMoviesByGenre} />
+          <Header genremovie={genremovie} getMoviesByGenre={getMoviesByGenre}
+          loading ={loading} />
         </div>
         <body>
           <div className="container-xxl mt-2 ">
@@ -77,26 +84,7 @@ function App() {
                 <div className="row">
                   <Switch>
                     <Route exact path="/">
-                      {popularmovie ? (
-                        popularmovie.map((m) => (
-                          <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
-                            <MovieItem
-                              key={m.id}
-                              id={m.id}
-                              title={m.title}
-                              image={imgUrl + m.poster_path}
-                              overview={m.overview}
-                            />
-                          </div>
-                        ))
-                      ) : (
-                        <div
-                          className="spinner-border text-primary"
-                          role="status"
-                        >
-                          <span class="visually-hidden">Loading...</span>
-                        </div>
-                      )}
+                     <MovieItemHome popularmovie={popularmovie}loading={loading}/>                      
                     </Route>
                     <Route path="/genre/:genre/:id/">
                       <MovieItemGenre
