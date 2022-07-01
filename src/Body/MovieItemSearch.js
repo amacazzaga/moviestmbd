@@ -1,9 +1,9 @@
 import React from 'react'
 import MovieItem from './MovieItem';
 
-const MovieItemSearch = ({genremovie}) => {
+const MovieItemSearch = ({genremovie,loading}) => {
     const imgUrl = "https://image.tmdb.org/t/p/w780";
-    return genremovie ? (
+    return loading != true ? (
         genremovie.map((m) => (
           <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
             <MovieItem

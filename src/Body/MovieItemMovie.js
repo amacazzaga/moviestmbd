@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const MovieItemMovie = () => {
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState([]);
   const [loading,setLoading]=useState(true)
   const { movies } = useParams();
   const imgUrl = "https://image.tmdb.org/t/p/w780";
@@ -30,7 +30,6 @@ const MovieItemMovie = () => {
   useEffect(() => {
     getMoviesByMovie(urlMovie);
   }, [movieEndPoint]);
-
   ////////////////////////////////////
   return loading != true ? (
     movie.map((m) => (

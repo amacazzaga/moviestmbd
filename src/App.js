@@ -98,7 +98,7 @@ function App() {
                       <TelevisionItemTelevision />
                     </Route>
                     <Route path="/search/">
-                      <MovieItemSearch genremovie={genremovie} />
+                      <MovieItemSearch genremovie={genremovie} loading={loading} />
                     </Route>
                   </Switch>
                 </div>
