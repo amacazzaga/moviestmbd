@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonHeaderGenre from "./ButtonHeaderGengre";
 import ButtonHeaderMovie from "./ButtonHeaderMovie";
+import Logo from "./Logo";
 import ButtonHeaderTelevision from "./ButtonHeaderTelevision";
 import InputSearch from "./InputSearch";
 import HamburgerMenu from "./HamburgerMenu";
@@ -28,20 +29,22 @@ const Header = ({ gengremovie, getMoviesByGenre }) => {
           <div class={`collapse navbar-${collapse}`}>
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
+                <Logo />
                 <ButtonHeaderGenre
                   getMoviesByGenre={getMoviesByGenre}
                   text={"Genre"}
                 />
-                {/*make button, create component for button header movie and on tv /home */}
                 <ButtonHeaderMovie text={"Movies"} />
                 <ButtonHeaderTelevision text={"On TV"} />
-
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
               </li>
             </ul>
             <div className="container-md">
               <form class="d-flex ">
-                <InputSearch gengremovie={gengremovie} getMoviesByGenre={getMoviesByGenre} />
+                <InputSearch
+                  gengremovie={gengremovie}
+                  getMoviesByGenre={getMoviesByGenre}
+                />
               </form>
             </div>
           </div>
