@@ -14,6 +14,7 @@ const Header = ({ gengremovie, getMoviesByGenre }) => {
     <header className="container-xxl mt-15 shadow-lg  rounded ">
       <nav class=" navbar-expand-md  ">
         <div class="container-xl  ">
+        
           <HamburgerMenu
             onClick={() => {
               if (collapse === "collapse") {
@@ -29,7 +30,7 @@ const Header = ({ gengremovie, getMoviesByGenre }) => {
           <div class={`collapse navbar-${collapse}`}>
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
-                <Logo />
+              <Logo />
                 <ButtonHeaderGenre
                   getMoviesByGenre={getMoviesByGenre}
                   text={"Genre"}
