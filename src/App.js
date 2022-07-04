@@ -10,6 +10,7 @@ import MovieItemHome from "./Body/MovieItemHome";
 import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
 import Logo from "./Header/Logo";
+import LogoFooter from "./Footer/LogoFooter";
 ///////////////////////////////////////////////////////////////////////
 const baseUrl = "https://api.themoviedb.org/3/discover";
 const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
@@ -163,8 +164,8 @@ function App() {
             </div>
           </div>
 
-          <footer className="container-xxl d-flex align-items-center mt-2">
-            <Logo />
+          <footer className="container-xxl d-block d-flex justify-content-center mt-2">
+            <LogoFooter />
           </footer>
         </body>
       </div>
