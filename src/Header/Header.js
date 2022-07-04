@@ -8,13 +8,12 @@ import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 
 const Header = ({ gengremovie, getMoviesByGenre }) => {
-  const [collapse, setCollapse] = useState("collapse");
+const [collapse, setCollapse] = useState("collapse");
 
   return (
     <header className="container-xxl mt-15 shadow-lg  rounded ">
       <nav class=" navbar-expand-md  ">
         <div class="container-xl  ">
-        
           <HamburgerMenu
             onClick={() => {
               if (collapse === "collapse") {
@@ -30,7 +29,8 @@ const Header = ({ gengremovie, getMoviesByGenre }) => {
           <div class={`collapse navbar-${collapse}`}>
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">
-              <Logo />
+               
+                <span className="d-flex align-self-center"> <Logo /></span>
                 <ButtonHeaderGenre
                   getMoviesByGenre={getMoviesByGenre}
                   text={"Genre"}

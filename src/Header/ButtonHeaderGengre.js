@@ -90,7 +90,7 @@ const ButtonHeaderGengre = ({ text }) => {
             setDropdown("dropdown-menu");
           }
         }}
-        class=" btn-outline-secondary dropdown-toggle "
+        class=" btn-outline-secondary dropdown-toggle align-self-center "
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
