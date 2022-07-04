@@ -6,10 +6,10 @@ const Logo = () => {
   return (
     <Link  to={"/"}>
         <button
-        class=" btn-outline-secondary tmbd d-none d-lg-block p-0 pb-3"
+        class=" btn-outline-secondary d-none d-lg-block  "
         type="button"
       >
-       TMBD
+     TMBD
       </button>
     </Link>
   );
