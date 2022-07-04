@@ -9,6 +9,7 @@ import MovieItemMovie from "./Body/MovieItemMovie";
 import MovieItemHome from "./Body/MovieItemHome";
 import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
+import Logo from "./Header/Logo";
 ///////////////////////////////////////////////////////////////////////
 const baseUrl = "https://api.themoviedb.org/3/discover";
 const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
@@ -67,20 +68,23 @@ function App() {
         console.log(e.error);
       });
   };
-  const classChanger = ()=>{
+  const classChanger = () => {
     if (accordionButtonTelevision === "collapse")
-    setAccordionButtonTelevision("collapse show");
-  else {
-    setAccordionButtonTelevision("collapse");
-  }
-  }
+      setAccordionButtonTelevision("collapse show");
+    else {
+      setAccordionButtonTelevision("collapse");
+    }
+  };
   /*return*/
   return (
     <Router>
       <div>
         <div className="container-xxl mt-2 ">
-          <Header genremovie={genremovie} getMoviesByGenre={getMoviesByGenre}
-          loading ={loading} />
+          <Header
+            genremovie={genremovie}
+            getMoviesByGenre={getMoviesByGenre}
+            loading={loading}
+          />
         </div>
         <body>
           <div className="container-xxl mt-2 ">
@@ -89,7 +93,10 @@ function App() {
                 <div className="row">
                   <Switch>
                     <Route exact path="/">
-                     <MovieItemHome popularmovie={popularmovie}loading={loading}/>                      
+                      <MovieItemHome
+                        popularmovie={popularmovie}
+                        loading={loading}
+                      />
                     </Route>
                     <Route path="/genre/:genre/:id/">
                       <MovieItemGenre
@@ -104,7 +111,10 @@ function App() {
                       <TelevisionItemTelevision />
                     </Route>
                     <Route path="/search/">
-                      <MovieItemSearch genremovie={genremovie} loading={loading} />
+                      <MovieItemSearch
+                        genremovie={genremovie}
+                        loading={loading}
+                      />
                     </Route>
                   </Switch>
                 </div>
@@ -115,7 +125,7 @@ function App() {
                     <h2 class="accordion-header">
                       <button
                         onClick={() => {
-                         classChanger()
+                          classChanger();
                         }}
                         class="accordion-button "
                         type="button"
@@ -137,7 +147,10 @@ function App() {
                           <nav className="navbar">
                             <ul className="p-1">
                               <li>
-                               <TelevisionItemHome populartelevision={populartelevision} loading={loading}/>
+                                <TelevisionItemHome
+                                  populartelevision={populartelevision}
+                                  loading={loading}
+                                />
                               </li>
                             </ul>
                           </nav>
@@ -150,7 +163,9 @@ function App() {
             </div>
           </div>
 
-          <footer>footer</footer>
+          <footer className="container-xxl d-flex align-items-center mt-2">
+            <Logo />
+          </footer>
         </body>
       </div>
     </Router>
