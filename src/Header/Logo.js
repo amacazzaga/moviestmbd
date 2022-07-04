@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link  to={"/"}>
         <button
-        class=" btn-outline-secondary d-none d-lg-block  "
+        class=" btn-outline-secondary d-none d-lg-block tmbd  "
         type="button"
       >
      TMBD
