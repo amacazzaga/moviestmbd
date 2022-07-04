@@ -1,5 +1,10 @@
 /*logo*/
-
+.tmbd{
+  font-weight: bolder;
+  font-size: xx-large;
+  border-radius: 10px;
+  border: #22254b;
+}
 /*header*/
 header {
   background-color: #22254b;

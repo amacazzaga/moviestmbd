@@ -6,12 +6,10 @@ const Logo = () => {
   return (
     <Link  to={"/"}>
         <button
-        class=" btn-outline-secondary dropdown-toggle align-self-center "
+        class=" btn-outline-secondary tmbd d-none d-lg-block"
         type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
       >
-       Home
+       TMBD
       </button>
     </Link>
   );
