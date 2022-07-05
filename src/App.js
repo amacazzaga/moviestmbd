@@ -163,8 +163,7 @@ function App() {
               </div>
             </div>
           </div>
-
-          <footer className="container-xxl d-block d-flex justify-content-center mt-2">
+          <footer className="container-xxl d-flex justify-content-center mt-2">
             <LogoFooter />
           </footer>
         </body>
