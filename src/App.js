@@ -11,6 +11,7 @@ import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
 import Logo from "./Header/Logo";
 import LogoFooter from "./Footer/LogoFooter";
+import MovieItemInspect from "./Body/MovieItemInspect";
 ///////////////////////////////////////////////////////////////////////
 const baseUrl = "https://api.themoviedb.org/3/discover";
 const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
@@ -118,7 +119,7 @@ function App() {
                       />
                     </Route>
                     <Route path="/inspectmovie/:id/">
-                      {/*INSPECTMOVIE*/ <h1>soy un h1</h1>}
+                     <MovieItemInspect/>
                     </Route>
                   </Switch>
                 </div>
