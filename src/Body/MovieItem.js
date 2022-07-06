@@ -26,7 +26,7 @@ const MovieItem = ({ title, overview, image }) => {
           class={dropdown}
           aria-labelledby="dropdownMenuClickableOutside"
         >
-          <p className="card-text">{overview}</p>
+          <p className="card-text m-2">{overview}</p>
         </ul>
       </div>
     </div>
