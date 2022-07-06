@@ -1,9 +1,12 @@
 import { useState } from "react";
-const MovieItem = ({ title, overview, image }) => {
+import { Link } from "react-router-dom";
+const MovieItem = ({ title, overview, image,id}) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
   return (
     <div className="card bg-transparent">
+      <Link to={`/${title}`}>
       <img src={image} className="card-img-top img-fluid" alt="..."></img>
+      </Link>
       <div className="card-body">
         <button
           onClick={() => {
