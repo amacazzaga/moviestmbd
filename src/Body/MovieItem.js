@@ -13,7 +13,8 @@ const MovieItem = ({ title, overview, image }) => {
               setDropdown("dropdown-menu");
             }
           }}
-          class="btn btn-secondary dropdown-toggle"
+          class="btn btn-secondary dropdown-toggle ;
+          "
           type="button"
           id="dropdownMenuClickableOutside"
           data-bs-toggle="dropdown"
@@ -22,10 +23,7 @@ const MovieItem = ({ title, overview, image }) => {
         >
           Overview
         </button>
-        <ul
-          class={dropdown}
-          aria-labelledby="dropdownMenuClickableOutside"
-        >
+        <ul class={dropdown} aria-labelledby="dropdownMenuClickableOutside">
           <p className="card-text m-2">{overview}</p>
         </ul>
       </div>

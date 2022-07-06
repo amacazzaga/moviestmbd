@@ -64,6 +64,12 @@ aside {
 .navbar::-webkit-scrollbar-thumb {
   background: #8ecae6;
 }
+/*overview button*/
+.btn-secondary{
+  background-color: grey;
+  font-weight: bolder;
+  color: #22254b;
+}
 /*footer*/
 footer{
   background-color: #22254b;
