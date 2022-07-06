@@ -117,6 +117,9 @@ function App() {
                         loading={loading}
                       />
                     </Route>
+                    <Route path="/inspectmovie/:id/">
+                      {/*INSPECTMOVIE*/ <h1>soy un h1</h1>}
+                    </Route>
                   </Switch>
                 </div>
               </div>
