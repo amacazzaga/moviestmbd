@@ -9,7 +9,6 @@ import MovieItemMovie from "./Body/MovieItemMovie";
 import MovieItemHome from "./Body/MovieItemHome";
 import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
-import Logo from "./Header/Logo";
 import LogoFooter from "./Footer/LogoFooter";
 import MovieItemInspect from "./Body/MovieItemInspect";
 ///////////////////////////////////////////////////////////////////////
@@ -119,7 +118,7 @@ function App() {
                       />
                     </Route>
                     <Route path="/inspectmovie/:id/">
-                     <MovieItemInspect/>
+                      <MovieItemInspect />
                     </Route>
                   </Switch>
                 </div>
