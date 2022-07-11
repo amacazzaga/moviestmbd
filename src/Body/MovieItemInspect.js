@@ -4,8 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ItemInspect from "./ItemInspect";
 
-
-const imgUrl = "https://image.tmdb.org/t/p/w780";
+const imgUrl = "https://image.tmdb.org/t/p/original";
 const MovieItemInspect = () => {
   const [movieInspected, setMovieInspected] = useState([]);
   const { id } = useParams();
@@ -31,15 +30,9 @@ const MovieItemInspect = () => {
 
   return (
     <div>
-      {movieInspected.map((m) => (<div className="col-xl-3 col-md-4 col-sm-6 mt-5">
-      <ItemInspect
-      adult = {m.original_title}
-      
-      />
-     
-      </div>))}
-     
-      
+      {movieInspected.map((m) => (
+        <ItemInspect adult={m.vote_average} image={imgUrl + m.poster_path} />
+      ))}
     </div>
   );
 };
