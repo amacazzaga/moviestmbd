@@ -11,6 +11,7 @@ import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
 import LogoFooter from "./Footer/LogoFooter";
 import MovieItemInspect from "./Body/MovieItemInspect";
+import ItemInspect from "./Body/ItemInspect";
 ///////////////////////////////////////////////////////////////////////
 const baseUrl = "https://api.themoviedb.org/3/discover";
 const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";

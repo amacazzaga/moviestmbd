@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ItemInspect = () => {
-  return (
-    <div className='container-xl'>
-        <img ></img>
-    </div>
-  )
+const ItemInspect = ({adult}) => {
+    return (<div>
+        <h1>{adult}</h1>
+        </div>)
+
+  
 }
 
 export default ItemInspect
