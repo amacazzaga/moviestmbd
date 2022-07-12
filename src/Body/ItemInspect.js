@@ -2,9 +2,11 @@ import React from "react";
 
 const ItemInspect = ({ adult, image }) => {
   return (
-    <div className="col-xl-3 col-md-4 col-sm-6 mt-5">
+    <div className="container-xxl">
       <h1>{adult}</h1>
+      <div className="container-xxl">
       <img className="img-fluid" src={image}></img>
+      </div>
     </div>
   );
 };

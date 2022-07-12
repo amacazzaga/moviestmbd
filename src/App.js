@@ -167,11 +167,11 @@ function App() {
               </div>
             </div>
           </div>
-          <footer className="container-xxl d-flex justify-content-center mt-2">
-            <LogoFooter />
-          </footer>
         </body>
       </div>
+      <footer className="container-xxl d-flex justify-content-center mt-2">
+        <LogoFooter />
+      </footer>
     </Router>
   );
 }
