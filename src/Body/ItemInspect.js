@@ -10,10 +10,12 @@ const ItemInspect = ({ vote, image }) => {
             <img className="img-fluid" src={image}></img>
           </div>
         </div>
-        <div className="col-sm-3"> eso</div>
-        <div className="col-sm-3"> eso</div>
-        <div className="col-sm-3"> eso</div>
-        <div className="col-sm-3"> eso</div>
+        <div className="col-sm-3">
+          <div>eso</div>
+          <div>eso</div>
+          <div>eso</div>
+          <div>eso</div>
+        </div>
       </div>
     </div>
   );
