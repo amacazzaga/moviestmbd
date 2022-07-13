@@ -79,16 +79,16 @@ function App() {
   };
   /*return*/
   return (
-    <Router>
-      <div>
-        <div className="container-xxl mt-2 ">
-          <Header
-            genremovie={genremovie}
-            getMoviesByGenre={getMoviesByGenre}
-            loading={loading}
-          />
-        </div>
-        <body>
+    <body>
+      <Router>
+        <div className="main">
+          <div className="container-xxl mt-2 ">
+            <Header
+              genremovie={genremovie}
+              getMoviesByGenre={getMoviesByGenre}
+              loading={loading}
+            />
+          </div>
           <div className="container-xxl mt-2 ">
             <div className="row">
               <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
@@ -124,6 +124,7 @@ function App() {
                   </Switch>
                 </div>
               </div>
+
               <div className="col-xl-2  d-none d-xl-block ">
                 <div class="accordion mt-5">
                   <div class="accordion-item">
@@ -167,12 +168,14 @@ function App() {
               </div>
             </div>
           </div>
-        </body>
-      </div>
-      <footer className="container-xxl d-flex justify-content-center mt-2">
-        <LogoFooter />
-      </footer>
-    </Router>
+          <footer className=" d-flex justify-content-center">
+            <div>
+              <LogoFooter />
+            </div>
+          </footer>
+        </div>
+      </Router>
+    </body>
   );
 }
 <script

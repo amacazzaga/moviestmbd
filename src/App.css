@@ -32,10 +32,10 @@ a{
 /*body*/
 body {
   background-color: #373b76;
+ 
 }
-.container-body {
-  margin: 35px;
-}
+
+
 .accordion-button:not(.collapsed) {
   font-weight: bold;
   background-color: #22254b;
@@ -64,6 +64,7 @@ aside {
 .navbar::-webkit-scrollbar-thumb {
   background: #8ecae6;
 }
+
 /*overview button*/
 .btn-secondary{
   background-color: grey;
