@@ -31,7 +31,8 @@ const MovieItemInspect = () => {
   return (
     <div>
       {movieInspected.map((m) => (
-        <ItemInspect vote={m.vote_average} image={imgUrl + m.poster_path}  />
+        <ItemInspect vote={m.vote_average} image={imgUrl + m.poster_path} 
+        title ={m.original_title} voteCount = {m.vote_count}/>
       ))}
     </div>
   );
