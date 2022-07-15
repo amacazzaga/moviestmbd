@@ -11,7 +11,6 @@ import "./App.css";
 import MovieItemSearch from "./Body/MovieItemSearch";
 import LogoFooter from "./Footer/LogoFooter";
 import MovieItemInspect from "./Body/MovieItemInspect";
-import ItemInspect from "./Body/ItemInspect";
 ///////////////////////////////////////////////////////////////////////
 const baseUrl = "https://api.themoviedb.org/3/discover";
 const baseUrlTv = "https://api.themoviedb.org/3/discover/tv?";
@@ -124,7 +123,6 @@ function App() {
                   </Switch>
                 </div>
               </div>
-
               <div className="col-xl-2  d-none d-xl-block ">
                 <div class="accordion mt-5">
                   <div class="accordion-item">

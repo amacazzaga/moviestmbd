@@ -24,12 +24,9 @@ const TelevisionItemTelevision = () => {
         console.log(e.error);
       });
   };
-  /////////////////////////////////////////
   useEffect(() => {
     getMoviesByMovie(urlMovie);
   }, [televisionEndPoint]);
-
-  ////////////////////////////////////
   return television ? (
     television.map((m) => (
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">

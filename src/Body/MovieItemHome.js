@@ -2,11 +2,9 @@ import React from "react";
 import MovieItem from "./MovieItem";
 
 const imgUrl = "https://image.tmdb.org/t/p/original";
-
 const MovieItemHome = ({ loading, popularmovie }) => {
   return loading !== true ? (
-    popularmovie.map((m) => (
-      
+    popularmovie.map((m) => (    
       <div className="col-xl-3 col-md-4 col-sm-6 mt-5  ">
         <MovieItem
           key={m.id}
@@ -15,8 +13,7 @@ const MovieItemHome = ({ loading, popularmovie }) => {
           image={imgUrl + m.poster_path}
           overview={m.overview}
         />
-      </div>
-      
+      </div>    
     ))
   ) : (
     <div className="vh" role="status">

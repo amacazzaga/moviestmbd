@@ -9,7 +9,6 @@ import { useState } from "react";
 
 const Header = ({ gengremovie, getMoviesByGenre }) => {
 const [collapse, setCollapse] = useState("collapse");
-
   return (
     <header className="container-xxl mt-15 shadow-lg  rounded ">
       <nav class=" navbar-expand-md  ">
@@ -25,7 +24,6 @@ const [collapse, setCollapse] = useState("collapse");
             className="navbar-toggler"
             aria-expanded="true"
           />
-
           <div class={`collapse navbar-${collapse}`}>
             <ul className="m-2 p-1 ">
               <li class="list-group list-group-horizontal d-flex">

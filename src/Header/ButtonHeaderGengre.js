@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 const genres = [
   {
     name: "action",
@@ -79,7 +79,6 @@ const genres = [
 
 const ButtonHeaderGengre = ({ text }) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
-
   return (
     <div class="list-group-item   dropdown">
       <button
@@ -97,7 +96,6 @@ const ButtonHeaderGengre = ({ text }) => {
       >
         {text}
       </button>
-
       <ul class={dropdown} aria-labelledby="dropdownMenuButton1">
         <li>
           <Link to={`/genre/${genres[0].name}/${genres[0].id}`}>

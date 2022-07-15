@@ -25,9 +25,7 @@ const MovieItemInspect = () => {
         console.log(e.error);
       });
   };
-
   /*return*/
-
   return (
     <div>
       {movieInspected.map((m) => (
