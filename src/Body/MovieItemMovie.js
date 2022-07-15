@@ -44,7 +44,7 @@ const MovieItemMovie = () => {
       </div>
     ))
   ) : (
-    <div className="spinner-border text-primary" role="status">
+    <div className="vh" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   );

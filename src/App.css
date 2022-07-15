@@ -28,14 +28,13 @@ a{
   background-color: #22254b;
   border: solid #22254b;
 }
-
 /*body*/
 body {
-  background-color: #373b76;
- 
+  background-color: #373b76; 
 }
-
-
+.vh{
+  height: 100vh;
+}
 .accordion-button:not(.collapsed) {
   font-weight: bold;
   background-color: #22254b;
