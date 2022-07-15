@@ -32,6 +32,7 @@ const MovieItemInspect = () => {
     <div>
       {movieInspected.map((m) => (
         <ItemInspect
+          status={m.status}
           vote={m.vote_average}
           image={imgUrl + m.poster_path}
           title={m.original_title}
@@ -40,9 +41,8 @@ const MovieItemInspect = () => {
           runtime={m.runtime}
           release={m.release_date}
           popularity={m.popularity}
-          status={m.status}
-          genres={m.genres.map((g)=>(g.name+", "))}
-          spokenLanguages ={m.spoken_languages.map((s)=>s.english_name+", ")}
+          genres={m.genres.map((g) => g.name + ", ")}
+          spokenLanguages={m.spoken_languages.map((s) => s.english_name + ", ")}
         />
       ))}
     </div>

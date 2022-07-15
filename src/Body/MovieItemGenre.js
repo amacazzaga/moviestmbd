@@ -29,7 +29,7 @@ const MovieItemGenre = ({ genremovie, getMoviesByGenre, loading }) => {
     ))
   ) : (
     <div className="vh" role="status">
-      <span class="visually-hidden">Loading...</span>
+      <span class="vh">Loading...</span>
     </div>
   );
 };

@@ -23,6 +23,7 @@ const ItemInspect = ({
             <h2 className="m-1">{tagline}</h2>
             <div className="col-lg-6">
               <div className="m-2">
+                <h3>Status: {status}</h3>
                 <h3>
                   Rated with: {vote}, From {voteCount} Votes
                 </h3>
@@ -30,7 +31,6 @@ const ItemInspect = ({
                 <h3>Release On : {release}</h3>
                 <h3>Popularity : {popularity}</h3>
                 <h3>Main Genres: {genres}</h3>
-                <h3>Status: {status}</h3>
                 <h3>Spoken Languages: {spokenLanguages}</h3>
               </div>
             </div>
