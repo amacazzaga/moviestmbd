@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const MovieItem = ({ title, overview, image,id}) => {
+const MovieItem = ({ overview, image,id}) => {
   const [dropdown, setDropdown] = useState("dropdown-menu");
   return (
     <div className="card bg-transparent">
