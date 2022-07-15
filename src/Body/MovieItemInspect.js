@@ -41,7 +41,8 @@ const MovieItemInspect = () => {
           release={m.release_date}
           popularity={m.popularity}
           status={m.status}
-          genres={m.genres.map((g)=>(g.name))}
+          genres={m.genres.map((g)=>(g.name+", "))}
+          spokenLanguages ={m.spoken_languages.map((s)=>s.english_name+", ")}
         />
       ))}
     </div>
