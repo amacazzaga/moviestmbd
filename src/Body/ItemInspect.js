@@ -7,7 +7,7 @@ const ItemInspect = ({
   voteCount,
   tagline,
   runtime,
-  release,
+  released,
   popularity,
   genres,
   status,
@@ -28,7 +28,7 @@ const ItemInspect = ({
                   Rated with: {vote}, From {voteCount} Votes
                 </h3>
                 <h3>This Movie Lasts : {runtime} Minutes</h3>
-                <h3>Release On : {release}</h3>
+                <h3>Released On : {released}</h3>
                 <h3>Popularity : {popularity}</h3>
                 <h3>Main Genres: {genres}</h3>
                 <h3>Spoken Languages: {spokenLanguages}</h3>

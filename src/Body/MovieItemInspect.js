@@ -37,7 +37,7 @@ const MovieItemInspect = () => {
           voteCount={m.vote_count}
           tagline={m.tagline}
           runtime={m.runtime}
-          release={m.release_date}
+          released={m.release_date}
           popularity={m.popularity}
           genres={m.genres.map((g) => g.name + ", ")}
           spokenLanguages={m.spoken_languages.map((s) => s.english_name + ", ")}
