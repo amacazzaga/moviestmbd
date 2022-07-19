@@ -79,109 +79,107 @@ function App() {
   /*return*/
   return (
     <div>
-    <head>
-    <meta charset="utf-8"></meta>
-      <title>MOVIES TMBD</title>
-      <meta name="description" content="Movies Search Popular Television Upcoming Action Drama Adventure"></meta>
-      <meta property="og:description" content="https://moviestmbd.vercel.app/| "></meta>
-      <meta property="og:image" content=""></meta>
-    </head>
-    <body>
-      <Router>
-        <div className="main">
-          <div className="container-xxl mt-2 ">
-            <Header
-              genremovie={genremovie}
-              getMoviesByGenre={getMoviesByGenre}
-              loading={loading}
-            />
-          </div>
-          <div className="container-xxl mt-2 ">
-            <div className="row">
-              <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
-                <div className="row">
-                  <Switch>
-                    <Route exact path="/">
-                      <MovieItemHome
-                        popularmovie={popularmovie}
-                        loading={loading}
-                      />
-                    </Route>
-                    <Route path="/genre/:genre/:id/">
-                      <MovieItemGenre
-                        genremovie={genremovie}
-                        getMoviesByGenre={getMoviesByGenre}
-                      />
-                    </Route>
-                    <Route path="/movie/:movies/">
-                      <MovieItemMovie />
-                    </Route>
-                    <Route path="/television/:ontv/">
-                      <TelevisionItemTelevision />
-                    </Route>
-                    <Route path="/search/">
-                      <MovieItemSearch
-                        genremovie={genremovie}
-                        loading={loading}
-                      />
-                    </Route>
-                    <Route path="/inspectmovie/:id/">
-                      <MovieItemInspect />
-                    </Route>
-                  </Switch>
+      <head>
+        <meta charset="utf-8"></meta>
+        <title>MOVIES TMBD</title>
+        <meta name="robots" content="max-image-preview:large"></meta>
+      </head>
+      <body>
+        <Router>
+          <div className="main">
+            <div className="container-xxl mt-2 ">
+              <Header
+                genremovie={genremovie}
+                getMoviesByGenre={getMoviesByGenre}
+                loading={loading}
+              />
+            </div>
+            <div className="container-xxl mt-2 ">
+              <div className="row">
+                <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 ">
+                  <div className="row">
+                    <Switch>
+                      <Route exact path="/">
+                        <MovieItemHome
+                          popularmovie={popularmovie}
+                          loading={loading}
+                        />
+                      </Route>
+                      <Route path="/genre/:genre/:id/">
+                        <MovieItemGenre
+                          genremovie={genremovie}
+                          getMoviesByGenre={getMoviesByGenre}
+                        />
+                      </Route>
+                      <Route path="/movie/:movies/">
+                        <MovieItemMovie />
+                      </Route>
+                      <Route path="/television/:ontv/">
+                        <TelevisionItemTelevision />
+                      </Route>
+                      <Route path="/search/">
+                        <MovieItemSearch
+                          genremovie={genremovie}
+                          loading={loading}
+                        />
+                      </Route>
+                      <Route path="/inspectmovie/:id/">
+                        <MovieItemInspect />
+                      </Route>
+                    </Switch>
+                  </div>
                 </div>
-              </div>
-              <div className="col-xl-2  d-none d-xl-block ">
-                <div class="accordion mt-5">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        onClick={() => {
-                          classChanger();
-                        }}
-                        class="accordion-button "
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
+                <div className="col-xl-2  d-none d-xl-block ">
+                  <div class="accordion mt-5">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          onClick={() => {
+                            classChanger();
+                          }}
+                          class="accordion-button "
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          On Television
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class={`accordion-collapse ${accordionButtonTelevision}`}
+                        aria-labelledby="headingOne"
                       >
-                        On Television
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      class={`accordion-collapse ${accordionButtonTelevision}`}
-                      aria-labelledby="headingOne"
-                    >
-                      <div class="accordion-body p-0">
-                        <aside>
-                          <nav className="navbar">
-                            <ul className="p-1">
-                              <li>
-                                <TelevisionItemHome
-                                  populartelevision={populartelevision}
-                                  loading={loading}
-                                />
-                              </li>
-                            </ul>
-                          </nav>
-                        </aside>
+                        <div class="accordion-body p-0">
+                          <aside>
+                            <nav className="navbar">
+                              <ul className="p-1">
+                                <li>
+                                  <TelevisionItemHome
+                                    populartelevision={populartelevision}
+                                    loading={loading}
+                                  />
+                                </li>
+                              </ul>
+                            </nav>
+                          </aside>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <footer className=" d-flex justify-content-center">
+              <div>
+                <LogoFooter />
+              </div>
+            </footer>
           </div>
-          <footer className=" d-flex justify-content-center">
-            <div>
-              <LogoFooter />
-            </div>
-          </footer>
-        </div>
-      </Router>
-    </body>
+        </Router>
+      </body>
     </div>
   );
 }
