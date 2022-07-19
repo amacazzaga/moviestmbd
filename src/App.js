@@ -80,17 +80,17 @@ function App() {
   return (
     <div>
       <head>
-        <title>React App</title>
+        <title>Movies TMBD</title>
         <meta
           name="description"
-          content="Web site created using create-react-app"
+          content="Explore Movies"
         ></meta>
         <meta property="og:url" content="https://moviestmbd.vercel.app/"></meta>
         <meta property="og:type" content="website"></meta>
         <meta property="og:title" content="React App"></meta>
         <meta
           property="og:description"
-          content="Web site created using create-react-app"
+          content="Explore Movies"
         ></meta>
         <meta
           property="og:image"
@@ -105,7 +105,7 @@ function App() {
         <meta name="twitter:title" content="React App"></meta>
         <meta
           name="twitter:description"
-          content="Web site created using create-react-app"
+          content="Explore Movies"
         ></meta>
         <meta
           name="twitter:image"
