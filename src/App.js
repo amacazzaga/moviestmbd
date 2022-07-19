@@ -80,43 +80,49 @@ function App() {
   return (
     <div>
       <head>
-        <title>Movies TMBD</title>
+        <metaTags>
+          <title>Movies TMBD</title>
+          <meta
+            name="description"
+            content="Web site created using create-react-app"
+          ></meta>
 
-        <title>React App</title>
-        <meta
-          name="description"
-          content="Web site created using create-react-app"
-        ></meta>
+          <meta
+            property="og:url"
+            content="https://moviestmbd.vercel.app/"
+          ></meta>
+          <meta property="og:type" content="website"></meta>
+          <meta property="og:title" content="React App"></meta>
+          <meta
+            property="og:description"
+            content="Web site created using create-react-app"
+          ></meta>
+          <meta
+            property="og:image"
+            content="https://i.imgur.com/Jr48j8p.png"
+          ></meta>
+          <meta property="og:image:width" content="1200"></meta>
+          <meta property="og:image:height" content="630"></meta>
 
-        <meta property="og:url" content="https://moviestmbd.vercel.app/"></meta>
-        <meta property="og:type" content="website"></meta>
-        <meta property="og:title" content="React App"></meta>
-        <meta
-          property="og:description"
-          content="Web site created using create-react-app"
-        ></meta>
-        <meta
-          property="og:image"
-          content="https://i.imgur.com/Jr48j8p.png"
-        ></meta>
-        <meta property="og:image:width" content="1200"></meta>
-        <meta property="og:image:height" content="630"></meta>
-
-        <meta name="twitter:card" content="summary_large_image"></meta>
-        <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
-        <meta
-          property="twitter:url"
-          content="https://moviestmbd.vercel.app/"
-        ></meta>
-        <meta name="twitter:title" content="React App"></meta>
-        <meta
-          name="twitter:description"
-          content="Web site created using create-react-app"
-        ></meta>
-        <meta
-          name="twitter:image"
-          content="https://i.imgur.com/Jr48j8p.png"
-        ></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta
+            property="twitter:domain"
+            content="moviestmbd.vercel.app"
+          ></meta>
+          <meta
+            property="twitter:url"
+            content="https://moviestmbd.vercel.app/"
+          ></meta>
+          <meta name="twitter:title" content="React App"></meta>
+          <meta
+            name="twitter:description"
+            content="Web site created using create-react-app"
+          ></meta>
+          <meta
+            name="twitter:image"
+            content="https://i.imgur.com/Jr48j8p.png"
+          ></meta>
+        </metaTags>
       </head>
       <body>
         <Router>
