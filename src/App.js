@@ -80,9 +80,7 @@ function App() {
   return (
     <div>
       <head>
-        Copy Add these meta tags to your website. ClinicGeek ClinicGeek Find
-        local clinics, including 24-hour clinics and hospitals for your health
-        issues. SPONSORED
+      
         <title>React App</title>
         <meta
           name="description"
@@ -97,7 +95,7 @@ function App() {
         ></meta>
         <meta
           property="og:image"
-          content="blob:https://vercel.com/038314d7-f87c-4ec3-b9f8-5dbb6988a8b2"
+          content="https://portfolio-gamma-one-97.vercel.app/static/media/tmbd.c2328e8941862d7192b0.jpeg"
         ></meta>
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
@@ -112,7 +110,7 @@ function App() {
         ></meta>
         <meta
           name="twitter:image"
-          content="blob:https://vercel.com/038314d7-f87c-4ec3-b9f8-5dbb6988a8b2"
+          content="https://portfolio-gamma-one-97.vercel.app/static/media/tmbd.c2328e8941862d7192b0.jpeg"
         ></meta>
       </head>
       <body>
