@@ -99,6 +99,8 @@ function App() {
           property="og:image"
           content="https://i.imgur.com/Jr48j8p.png"
         ></meta>
+        <meta property="og:image:width" content="1200"></meta>
+        <meta property="og:image:height" content="630"></meta>
 
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
