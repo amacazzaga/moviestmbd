@@ -81,15 +81,25 @@ function App() {
     <div>
       <head>
         <title>Movies TMBD</title>
-        <meta name="description" content="Explore Movies"></meta>
+
+        <title>React App</title>
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        ></meta>
+
         <meta property="og:url" content="https://moviestmbd.vercel.app/"></meta>
         <meta property="og:type" content="website"></meta>
         <meta property="og:title" content="React App"></meta>
-        <meta property="og:description" content="Explore Movies"></meta>
+        <meta
+          property="og:description"
+          content="Web site created using create-react-app"
+        ></meta>
         <meta
           property="og:image"
           content="https://i.imgur.com/Jr48j8p.png"
         ></meta>
+
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
         <meta
@@ -97,21 +107,12 @@ function App() {
           content="https://moviestmbd.vercel.app/"
         ></meta>
         <meta name="twitter:title" content="React App"></meta>
-        <meta name="twitter:description" content="Explore Movies"></meta>
+        <meta
+          name="twitter:description"
+          content="Web site created using create-react-app"
+        ></meta>
         <meta
           name="twitter:image"
-          content="https://i.imgur.com/Jr48j8p.png"
-        ></meta>
-        <meta name="linkedin:card" content="summary_large_image"></meta>
-        <meta property="linkedin:domain" content="moviestmbd.vercel.app"></meta>
-        <meta
-          property="linkedin:url"
-          content="https://moviestmbd.vercel.app/"
-        ></meta>
-        <meta name="linkedin:title" content="React App"></meta>
-        <meta name="linkedin:description" content="Explore Movies"></meta>
-        <meta
-          name="linkedin:image"
           content="https://i.imgur.com/Jr48j8p.png"
         ></meta>
       </head>
