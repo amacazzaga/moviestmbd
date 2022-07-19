@@ -80,7 +80,6 @@ function App() {
   return (
     <div>
       <head>
-      
         <title>React App</title>
         <meta
           name="description"
