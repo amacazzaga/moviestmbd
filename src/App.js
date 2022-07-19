@@ -99,7 +99,7 @@ function App() {
           ></meta>
           <meta
             property="og:image"
-            content="https://i.imgur.com/Jr48j8p.png"
+            content="https://www.youtube.com/img/desktop/yt_1200.png"
           ></meta>
           <meta property="og:image:width" content="1200"></meta>
           <meta property="og:image:height" content="630"></meta>
