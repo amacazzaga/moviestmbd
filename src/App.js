@@ -94,7 +94,7 @@ function App() {
         ></meta>
         <meta
           property="og:image"
-          content="https://ibb.co/bFP14kW"
+          content="https://i.imgur.com/Jr48j8p.png"
         ></meta>
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
