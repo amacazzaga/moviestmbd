@@ -80,35 +80,40 @@ function App() {
   return (
     <div>
       <head>
-        
-Copy
-Add these meta tags to your website.
-
-ClinicGeek
-ClinicGeek
-Find local clinics, including 24-hour clinics and hospitals for your health issues.
-SPONSORED
-
-  <!-- HTML Meta Tags -->
-  <title>React App</title>
-  <meta name="description" content="Web site created using create-react-app">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://moviestmbd.vercel.app/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="React App">
-  <meta property="og:description" content="Web site created using create-react-app">
-  <meta property="og:image" content="blob:https://vercel.com/038314d7-f87c-4ec3-b9f8-5dbb6988a8b2">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="moviestmbd.vercel.app">
-  <meta property="twitter:url" content="https://moviestmbd.vercel.app/">
-  <meta name="twitter:title" content="React App">
-  <meta name="twitter:description" content="Web site created using create-react-app">
-  <meta name="twitter:image" content="blob:https://vercel.com/038314d7-f87c-4ec3-b9f8-5dbb6988a8b2">
-
- 
+        Copy Add these meta tags to your website. ClinicGeek ClinicGeek Find
+        local clinics, including 24-hour clinics and hospitals for your health
+        issues. SPONSORED
+        <title>React App</title>
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        ></meta>
+        <meta property="og:url" content="https://moviestmbd.vercel.app/"></meta>
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:title" content="React App"></meta>
+        <meta
+          property="og:description"
+          content="Web site created using create-react-app"
+        ></meta>
+        <meta
+          property="og:image"
+          content="blob:https://vercel.com/038314d7-f87c-4ec3-b9f8-5dbb6988a8b2"
+        ></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
+        <meta
+          property="twitter:url"
+          content="https://moviestmbd.vercel.app/"
+        ></meta>
+        <meta name="twitter:title" content="React App"></meta>
+        <meta
+          name="twitter:description"
+          content="Web site created using create-react-app"
+        ></meta>
+        <meta
+          name="twitter:image"
+          content="blob:https://vercel.com/038314d7-f87c-4ec3-b9f8-5dbb6988a8b2"
+        ></meta>
       </head>
       <body>
         <Router>
