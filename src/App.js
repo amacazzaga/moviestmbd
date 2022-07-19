@@ -78,6 +78,14 @@ function App() {
   };
   /*return*/
   return (
+    <div>
+    <head>
+    <meta charset="utf-8"></meta>
+      <title>MOVIES TMBD</title>
+      <meta name="description" content="Movies Search Popular Television Upcoming Action Drama Adventure"></meta>
+      <meta property="og:description" content="https://moviestmbd.vercel.app/| "></meta>
+      <meta property="og:image" content=""></meta>
+    </head>
     <body>
       <Router>
         <div className="main">
@@ -174,6 +182,7 @@ function App() {
         </div>
       </Router>
     </body>
+    </div>
   );
 }
 <script
