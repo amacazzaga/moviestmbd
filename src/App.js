@@ -94,7 +94,7 @@ function App() {
         ></meta>
         <meta
           property="og:image"
-          content="https://portfolio-gamma-one-97.vercel.app/static/media/tmbd.c2328e8941862d7192b0.jpeg"
+          content="https://ibb.co/bFP14kW"
         ></meta>
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:domain" content="moviestmbd.vercel.app"></meta>
